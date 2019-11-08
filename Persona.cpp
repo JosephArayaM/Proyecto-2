@@ -5,6 +5,8 @@ Persona::Persona(string nom, string ide) {
 	id=ide;
 }
 
+Persona::~Persona(){}
+
 void Persona::setNombre(string nombre) {
 	this->nombre = nombre;
 }

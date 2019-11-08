@@ -5,7 +5,7 @@ ListaSocios::ListaSocios() {
 	actual = nullptr;
 }
 
-ListaSocios::ListaSocios(const ListaSocios& orig) {
+ListaSocios::ListaSocios( ListaSocios* orig) {
 }
 
 ListaSocios::~ListaSocios() {
@@ -28,7 +28,7 @@ string ListaSocios::toString() {
 	return resultado;
 }
 
-Nodo* ListaSocios::getPrimero() const {
+Nodo* ListaSocios::getPrimero()  {
 	return primero;
 }
 
@@ -36,7 +36,7 @@ void ListaSocios::setPrimero(Nodo* primero) {
 	ListaSocios::primero = primero;
 }
 
-Nodo* ListaSocios::getActual() const {
+Nodo* ListaSocios::getActual()  {
 	return actual;
 }
 

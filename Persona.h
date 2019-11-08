@@ -17,11 +17,12 @@ protected:
 public:
 	Persona() {	}
 	Persona(string , string );
+	virtual ~Persona();
 	void setNombre(string);
 	string getNombre();
 	void setId(string id);
 	string getId();
-	string toString();
+	virtual string toString();
 
 
 };

@@ -46,7 +46,7 @@ void ListaInstructores::setActual(NodoInstructor* actual) {
 }
 
 
-void ListaInstructores::insertarInicio( Instructor* instructor) {
+void ListaInstructores::insertarInstructor( Instructor* instructor) {
 	actual = new NodoInstructor(instructor, nullptr);
 	if (primero == nullptr) {
 		primero = actual;
@@ -57,20 +57,9 @@ void ListaInstructores::insertarInicio( Instructor* instructor) {
 	}
 }
 
-void ListaInstructores::insertarFinal( Instructor* instructor) {
-	actual = primero;
-	if (primero == nullptr) {
-		primero = new NodoInstructor(instructor, nullptr);
-	}
-	else {
-		while (actual->getSiguiente() != nullptr) {
-			actual = actual->getSiguiente();
-		}
-		actual->setSiguiente(new NodoInstructor(instructor, nullptr));
-	}
-}
 
-bool ListaInstructores::eliminarInicio() {
+
+bool ListaInstructores::eliminarInstructor() {
 	if (primero == nullptr) {
 		return false;
 	}

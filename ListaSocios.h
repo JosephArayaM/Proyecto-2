@@ -11,11 +11,11 @@ private:
 	Nodo* actual;
 public:
 	ListaSocios();
-	ListaSocios(const ListaSocios& orig);
+	ListaSocios( ListaSocios* orig);
 	virtual ~ListaSocios();
-	Nodo* getPrimero() const;
+	Nodo* getPrimero();
 	void setPrimero(Nodo* primero);
-	Nodo* getActual() const;
+	Nodo* getActual() ;
 	void setActual(Nodo* actual);
 	string toString();
 

@@ -18,8 +18,7 @@ public:
 	NodoInstructor* getActual() ;
 	void setActual(NodoInstructor* actual);
 	string toString();
-	void insertarInicio(Instructor* instructor);
-	void insertarFinal(Instructor* instructor);
-	bool eliminarInicio();
+	void insertarInstructor(Instructor* instructor);
+	bool eliminarInstructor();
 	int totalInstructores();
 };

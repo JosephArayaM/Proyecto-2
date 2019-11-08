@@ -14,30 +14,28 @@ int main() {
 	Expediente* expediente4 = new Expediente(80.6, 37.4, 24.9);
 	Expediente* expediente5 = new Expediente(64.4, 40.1, 26.5);
 
-	Instructor* instructor1 = new Instructor("Pablo","7-02234","8446-5460","pablito67@gmail.com",expediente1);
-	Instructor* instructor2 = new Instructor("Daniel", "3-2221", "7665-3221", "danielvg@gmail.com", expediente2);
-	Instructor* instructor3 = new Instructor("Sofia", "1-6786", "8318-9654", "soperez@gmail.com", expediente3);
-	Instructor* instructor4 = new Instructor("Erick", "1-43564", "8778-3487", "eg8919@gmail.com", expediente4);
-	Instructor* instructor5 = new Instructor("Ester", "4-2389t", "7331-1773", "moreste45@gmail.com", expediente5);
+	Instructor* instructor1 = new Instructor("Pablo","7-02234","8446-5460","pablito67@gmail.com",7.8,expediente1);
+	Instructor* instructor2 = new Instructor("Daniel", "3-2221", "7665-3221", "danielvg@gmail.com",8.1, expediente2);
+	Instructor* instructor3 = new Instructor("Sofia", "1-6786", "8318-9654", "soperez@gmail.com",9.6, expediente3);
+	Instructor* instructor4 = new Instructor("Erick", "1-43564", "8778-3487", "eg8919@gmail.com",8.5, expediente4);
+	Instructor* instructor5 = new Instructor("Ester", "4-2389t", "7331-1773", "moreste45@gmail.com",7.2, expediente5);
 
 
 	ListaInstructores* listaInstructores = new ListaInstructores();
 
-	listaInstructores->insertarInicio(instructor1);
-	listaInstructores->insertarInicio(instructor2);
-	listaInstructores->insertarInicio(instructor3);
-	listaInstructores->insertarInicio(instructor4);
-	listaInstructores->insertarInicio(instructor5);
+	listaInstructores->insertarInstructor(instructor1);
+	listaInstructores->insertarInstructor(instructor2);
+	listaInstructores->insertarInstructor(instructor3);
+	listaInstructores->insertarInstructor(instructor4);
+	listaInstructores->insertarInstructor(instructor5);
 
 	cout << "Lista de Instructores [" << listaInstructores->totalInstructores() << "] \n" << listaInstructores->toString() << endl;
 
 	// Se elimina el primer nodo
-	listaInstructores->eliminarInicio();
+	listaInstructores->eliminarInstructor();
 	cout << "Lista de instructores [" << listaInstructores->totalInstructores() << "] \n" << listaInstructores->toString() << endl;
 
-	// Se inserta al final de la lista
-	listaInstructores->insertarFinal(instructor5);
-	cout << "Lista de Instructores [" << listaInstructores->totalInstructores() << "] \n" << listaInstructores->toString() << endl;
+
 
 	// Se elimina toda la lista
 	delete(listaInstructores);
