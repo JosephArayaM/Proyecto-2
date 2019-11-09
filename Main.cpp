@@ -1,15 +1,12 @@
 #include<sstream>
 #include<iostream>
-#include "Persona.h"
-#include "Instructor.h"
-#include "Expediente.h"
-#include "Socio.h"
-#include "ListaSocios.h"
-#include "ListaInstructores.h"
+#include "Control.h"
+
 using namespace std;
 
 int main() {
-
+	Control c1 = new Control();
+	c1->opciones();
 
 	//Expediente* expediente1 = new Expediente(60.5,35.3,25.8);
 	//Expediente* expediente2 = new Expediente(75.0, 30.2, 22.3);

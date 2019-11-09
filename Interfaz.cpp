@@ -4,129 +4,138 @@
 #include "Interfaz.h"
 using namespace std;
 
-
-
 Interfaz::Interfaz(){}
 
 Interfaz::~Interfaz(){}
 
-void Interfaz::MainMenu() {
-	int opcion1;
-	do {
-		cout << "----------------------------------------------------------------------------------------" << endl;
-		cout << "   * Bienvenido a Vital salud, a cual sistema desea entrar?: *" << endl;
-		cout << "----------------------------------------------------------------------------------------" << endl;
-		cout << "   * 1. Mantenimiento " << endl;
-		cout << "   * 2. Instructores " << endl;
-		cout << "   * 3. Socios" << endl;
-		cout << "   * 4. Clases" << endl;
-		cout << "   * 5. Salir del sistema" << endl;
-		cout << "-----------------------------------------------------------------------------------------" << endl;
-		cin >> opcion1;
-		cout << endl;
-		switch (opcion1) {
-		case 1: menuMan();
-			break;
-		case 2: menuIns();
-			break;
-		case 3: menuSoc();
-			break;
-		case 4: menuCla();
-			break;
-		default:
-			cout << "-----------------------------------------------------------------------------" << endl;
-			cout << " * Ingreso un numero que no corresponde a ninguna de las opciones posibles," << endl;
-			cout << "   Vuelva a intentarlo" << endl;
-			cout << "-----------------------------------------------------------------------------" << endl;
-			cout << endl;
-			break;
-		}
-	} while (opcion1 != 6);
+void Interfaz::imprimeMenu() {
+    system("cls");
+    cout << "----------------------------------------------------" << endl;
+    cout << "-------------Bienvenido a Vital Salud---------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "1) - Iscripcion" << endl;
+    cout << "2) - Instructores" << endl;
+    cout << "3) - Socios" << endl;
+    cout << "4) - Clases" << endl;
+    cout << "5) - Salones" << endl;
+    cout << "6) - Salir " << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "------A cual sistema desea entrar ?-----------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << endl;
+    
 }
 
-void Interfaz::menuMan() {
-	int opcion2;
-	do {
-		cout << "----------------------------------------------------------------------------------------" << endl;
-		cout << "   * Bienvenido al sistema de mantenimiento, que desea hacer?: *" << endl;
-		cout << "----------------------------------------------------------------------------------------" << endl;
-		cout << "   * 1. Ingresar socios " << endl;
-		cout << "   * 2. Ingresar instructores " << endl;
-		cout << "   * 3. Ingresar socios" << endl;
-		cout << "   * 4. Ingresar clases" << endl;
-		cout << "   * 5. Regresar al sistema principal" << endl;
-		cout << "----------------------------------------------------------------------------------------" << endl;
-		cin >> opcion2;
-		cout << endl;
-		switch (opcion2) {
-		case 1:
-
-			break;
-		case 2:
-
-			break;
-		case 3:
-
-			break;
-		case 4:
-
-			break;
-		default:
-			cout << "-----------------------------------------------------------------------------" << endl;
-			cout << " * Ingreso un numero que no corresponde a ninguna de las opciones posibles," << endl;
-			cout << "   Vuelva a intentarlo" << endl;
-			cout << "-----------------------------------------------------------------------------" << endl;
-			cout << endl;
-			break;
-		}
-	} while (opcion2 != 5);
+void Interfaz::imprimeInscrip(){
+    system("cls");
+    cout << "----------------------------------------------------" << endl;
+    cout << "-------Bienvenido al sistema de inscripciones-------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "1) - Inscribir un nuevo socio" << endl;
+    cout << "2) - Salir " << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "----------------Que desea hacer ?-------------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << endl;
 }
 
-void Interfaz::menuIns() {
-	int opcion3;
-	do {
-		cout << "----------------------------------------------------------------------------------------" << endl;
-		cout << "   * Bienvenido al sistema de Instructores, que desea hacer?: *" << endl;
-		cout << "----------------------------------------------------------------------------------------" << endl;
-		cout << "   * 1. Actualizar los datos de un socio " << endl;
-		cout << "   * 2. Ingresar al sitema de rutinas " << endl;
-		cout << "   * 3. " << endl;
-		cout << "   * 4. Ingresar clases" << endl;
-		cout << "   * 5. Regresar al sistema principal" << endl;
-		cout << "----------------------------------------------------------------------------------------" << endl;
-		cin >> opcion3;
-		cout << endl;
-		switch (opcion3) {
-		case 1:
-
-			break;
-		case 2: menuRut();
-			break;
-		case 3:
-
-			break;
-		case 4:
-
-			break;
-		default:
-			cout << "-----------------------------------------------------------------------------" << endl;
-			cout << " * Ingreso un numero que no corresponde a ninguna de las opciones posibles," << endl;
-			cout << "   Vuelva a intentarlo" << endl;
-			cout << "-----------------------------------------------------------------------------" << endl;
-			cout << endl;
-			break;
-		}
-	} while (opcion3 != 5);
+void Interfaz::imprimeIns() {
+    system("cls");
+    cout << "----------------------------------------------------" << endl;
+    cout << "-------------Menu de Instructores-------------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "1) - Contratar  un Instructor" << endl;
+    cout << "2) - Mostrar la lista de Instructores" << endl;
+    cout << "3) - Ingresar al menu de rutinas" << endl;
+    cout << "4) - Mostrar el instructor con mejores resultados" << endl;
+    cout << "5) - Salir " << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "-------------Que desea hacer ?----------------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << endl;
 }
 
-void Interfaz::menuRut() {
-	cout << "2;";
+void Interfaz::imprimeSoc() {
+    system("cls");
+    cout << "----------------------------------------------------" << endl;
+    cout << "-----------------Menu de Socios---------------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "1) - Mostrar la lista de Socios" << endl;
+    cout << "2) - Mostrar un socio" << endl;
+    cout << "3) - Mostrar la rutina de un socio" << endl;
+    cout << "4) - Salir " << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "----------------Que desea hacer ?-------------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << endl; 
 }
 
-void Interfaz::menuSoc() {
-	cout << "2;";
+void Interfaz::imprimeCla() {
+    system("cls");
+    cout << "----------------------------------------------------" << endl;
+    cout << "----------------Menu de Clases----------------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "1) - Crear una clase" << endl;
+    cout << "3) - Incribir socios a clases" << endl;
+    cout << "4) - Ver socios inscritos a una clase" << endl;
+    cout << "5) - Salir " << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "----------------Que desea hacer ?-------------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << endl; 
 }
 
-void Interfaz::menuCla() {
-	cout << "2;";
+void Interfaz::imprimeRut() {
+    system("cls");
+    cout << "----------------------------------------------------" << endl;
+    cout << "-----------------Menu de Rutinas--------------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "1) - Ver rutinas" << endl;
+    cout << "2) - Renovar rutina " << endl;
+    cout << "3) - Salir " << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "----------------Que desea hacer ?-------------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << endl; 
 }
+
+void Interfaz::imprimeSal(){
+    system("cls");
+    cout << "----------------------------------------------------" << endl;
+    cout << "-----------------Menu de Salones--------------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "1) - Ver salones" << endl;
+    cout << "2) - Ver las clases de un salon" << endl;
+    cout << "3) - Salir " << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "----------------Que desea hacer ?-------------------" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << endl; 
+}
+
+int Interfaz::validar() {
+	int opc;
+	bool c = true;
+	while (c) {
+            cout << "Opcion > ";
+            if (!(cin >> opc)) { //revisa si falla
+                cout << "Error!";
+                cin.clear();
+                cin.ignore(1024, '\n');
+            }
+            else if (opc < 0 || opc >6) { 
+                cout << "Error!";
+                cin.clear();
+                cin.ignore(1024, '\n');
+            }
+            else { c = false; }
+	}
+	return opc;
+}
+
+int Interfaz::menu() { //cuantas opciones hay en el menu
+	int opc;
+	opc = validar();
+	return opc;
+}
+
