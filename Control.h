@@ -1,27 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Control.h
- * Author: Joseph
- *
- * Created on 7 de noviembre de 2019, 04:21 PM
- */
-
 #ifndef CONTROL_H
 #define CONTROL_H
 
+#include "Interfaz.h"
+#include "Clase.h"
+#include "Expediente.h"
+#include "Instructor.h"
+#include "ListaInstructores.h"
+#include "ListaSocios.h"
+#include "Persona.h"
+#include "Salon.h"
+#include "Socio.h"
+
 class Control {
 public:
-    Control();
-    Control(const Control& orig);
-    virtual ~Control();
-private:
+
+Interfaz* i = new Interfaz;
+ListaInstructores* 
+
+Control();
+void opciones();
+void opcInscrip();
+void opcIns();
+void opcSoc();
+void opcCla();
+void opcRut();
+void opcSal();
+~Control();
 
 };
-
 #endif /* CONTROL_H */
 
