@@ -1,44 +1,28 @@
 #include "Rutina.h"
 
 Rutina::Rutina(){
+	
 }
 
-Rutina::Rutina(string ven, string in, Expediente* dat, string cod) {
-	fechaVen = ven;
-	fechaIn = in;
-	randCod = cod;
-	datos = dat;
+Rutina::Rutina(int obje, string racod, Expediente* , Ejercicio* ) {
+	objetivo = obje;
+	randCod = racod;
 }
+
+
 
 Rutina::~Rutina(){}
 
-
-void Rutina::SetFechaIn(string fechaIn) {
-	this->fechaIn = fechaIn;
+int Rutina::getObjetivo() {
+	return objetivo;
 }
 
-string Rutina::GetFechaIn()  {
-	return fechaIn;
+void Rutina::setObjetivo(int obje) {
+	objetivo = obje;
 }
 
-void Rutina::SetFechaVen(string fechaVen) {
-	this->fechaVen = fechaVen;
-}
-
-string Rutina::GetFechaVen()  {
-	return fechaVen;
-}
-
-void Rutina::SetRepeticiones(string repeticiones) {
-	this->GetRepeticiones() = repeticiones;
-}
-string Rutina:: GetRepeticiones()  {
-	return repeticiones;
-}
-
-
-void Rutina::SetRandCod(string randCod) {
-	this->randCod = randCod;
+void Rutina::SetRandCod(string racod) {
+	randCod = racod;
 }
 
 string Rutina::GetRandCod()  {

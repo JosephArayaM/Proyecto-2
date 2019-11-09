@@ -2,28 +2,26 @@
 #define Rutina_h
 
 #include "Expediente.h"
+#include "Ejercicio.h"
 
 using namespace std;
 
 class Rutina {
 private:
-	string fechaIn;
-	string fechaVen;
+
 	int objetivo; // 1 para bajar grasa corporal y 2 para subir masa muscular
-	Expediente* datos;
 	string randCod;
-	string repeticiones;
+	Expediente* datos;
+	Ejercicio* vec[12];
+
 
 public:
 	Rutina();
-	Rutina(string ven, string in, Expediente* dat, string cod);
+	Rutina(int, string, Expediente*,Ejercicio*);
 	virtual ~Rutina();
-	void SetFechaIn(string fechaIn);
-	string GetFechaIn() ;
-	void SetFechaVen(string fechaVen);
-	string GetFechaVen() ;
-	void SetRepeticiones(string repeticiones);
-	string GetRepeticiones() ;
+	
+	int getObjetivo();
+	void setObjetivo(int);
 	void SetRandCod(string randCod);
 	string GetRandCod() ;
 	string MostrarRutina();
