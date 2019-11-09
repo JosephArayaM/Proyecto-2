@@ -13,6 +13,8 @@ private:
 
 	NodoSocio* primero;
 	NodoSocio* actual;
+
+
 public:
 	ListaSocios();
 	ListaSocios( ListaSocios* orig);
@@ -27,7 +29,7 @@ public:
 	bool eliminarSocio();
 	int totalSocios();
 
-	int mejorResultado();
+
 
 };
 

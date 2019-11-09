@@ -76,6 +76,3 @@ int ListaSocios::totalSocios() {
 }
 
 
-int ListaSocios::mejorResultado() {
-	
-}

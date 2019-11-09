@@ -25,6 +25,7 @@ class Socio: public Persona {
 		string getNumeroTelefono();
 		void setCorreo(string);
 		void setNumeroTelefono(string);
+		bool determinarProg(float);
 		string toString();
 	
 

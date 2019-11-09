@@ -52,6 +52,22 @@ void Socio::setNumeroTelefono(string numTel){
 }
 
 
+bool Socio::determinarProg(float dat) {
+	if (Vigente->getObjetivo() == 1) {
+		if (Vigente->getDatos()->GetGrasaCor() < dat)
+			return true;
+		else
+			return false;
+	}
+	else
+		if (Vigente->getObjetivo() == 2) {
+			if (Vigente->getDatos()->GetMasaMusc() < dat)
+				return true;
+			else
+				return false;
+		}
+}
+
 
 
 string Socio::toString(){

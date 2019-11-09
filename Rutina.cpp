@@ -1,5 +1,6 @@
 #include "Rutina.h"
 
+
 Rutina::Rutina(){
 	
 }
@@ -29,17 +30,26 @@ string Rutina::GetRandCod()  {
 	return randCod;
 }
 
-string Rutina::MostrarRutina() {
-	return "";
+Expediente* Rutina::getDatos() {
+	return datos;
 }
+
+void Rutina::setDatos(Expediente* datos){
+	this->datos;
+}
+
 
 void Rutina::GenerarCod() {
+		int num=0;
+		srand(time(NULL));
 
+		for (int i = 1; i <= 100; i++) {
+			num = 1 + rand() % (101 - 1);
+			cout << num << " ";
+		}
 }
 
-bool Rutina::determinarProg() {
-	return true;
-}
+
 
 string Rutina::toString() {
 	stringstream s;

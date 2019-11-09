@@ -1,6 +1,10 @@
 #ifndef Rutina_h
 #define Rutina_h
 
+#include <iostream>
+#include<sstream>
+#include <stdlib.h>
+#include <time.h>
 #include "Expediente.h"
 #include "Ejercicio.h"
 
@@ -24,9 +28,11 @@ public:
 	void setObjetivo(int);
 	void SetRandCod(string randCod);
 	string GetRandCod() ;
-	string MostrarRutina();
+	Expediente* getDatos();
+	void setDatos(Expediente* datos);
+
+
 	void GenerarCod();
-	bool determinarProg();
 
 	string toString();
 };
