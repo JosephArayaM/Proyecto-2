@@ -28,6 +28,7 @@ void Interfaz::imprimeMenu() {
 
 void Interfaz::imprimeInscrip(){
     system("cls");
+    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "-------Bienvenido al sistema de inscripciones-------" << endl;
     cout << "----------------------------------------------------" << endl;
@@ -41,6 +42,7 @@ void Interfaz::imprimeInscrip(){
 
 void Interfaz::imprimeIns() {
     system("cls");
+    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "-------------Menu de Instructores-------------------" << endl;
     cout << "----------------------------------------------------" << endl;
@@ -57,6 +59,7 @@ void Interfaz::imprimeIns() {
 
 void Interfaz::imprimeSoc() {
     system("cls");
+    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "-----------------Menu de Socios---------------------" << endl;
     cout << "----------------------------------------------------" << endl;
@@ -72,6 +75,7 @@ void Interfaz::imprimeSoc() {
 
 void Interfaz::imprimeCla() {
     system("cls");
+    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "----------------Menu de Clases----------------------" << endl;
     cout << "----------------------------------------------------" << endl;
@@ -87,6 +91,7 @@ void Interfaz::imprimeCla() {
 
 void Interfaz::imprimeRut() {
     system("cls");
+    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "-----------------Menu de Rutinas--------------------" << endl;
     cout << "----------------------------------------------------" << endl;
@@ -101,6 +106,7 @@ void Interfaz::imprimeRut() {
 
 void Interfaz::imprimeSal(){
     system("cls");
+    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "-----------------Menu de Salones--------------------" << endl;
     cout << "----------------------------------------------------" << endl;
@@ -123,7 +129,7 @@ int Interfaz::validar() {
                 cin.clear();
                 cin.ignore(1024, '\n');
             }
-            else if (opc < 0 || opc >6) { 
+            else if (opc < 0 || opc > 7) { 
                 cout << "Error!";
                 cin.clear();
                 cin.ignore(1024, '\n');
