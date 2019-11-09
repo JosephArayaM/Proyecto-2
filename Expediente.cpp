@@ -1,4 +1,6 @@
-#include "Expediente.h"
+#include"Expediente.h"
+using namespace std;
+
 
 Expediente::Expediente(float pe, float mm, float gc) {
 	peso = pe;
@@ -13,7 +15,7 @@ void Expediente::SetGrasaCor(float grasaCor) {
 	this->grasaCor = grasaCor;
 }
 
-float Expediente::GetGrasaCor() const {
+float Expediente::GetGrasaCor()  {
 	return grasaCor;
 }
 
@@ -21,7 +23,7 @@ void Expediente::SetMasaMusc(float masaMusc) {
 	this->masaMusc = masaMusc;
 }
 
-float Expediente::GetMasaMusc() const {
+float Expediente::GetMasaMusc()  {
 	return masaMusc;
 }
 
@@ -29,6 +31,6 @@ void Expediente::SetPeso(float peso) {
 	this->peso = peso;
 }
 
-float Expediente::GetPeso() const {
+float Expediente::GetPeso()  {
 	return peso;
 }

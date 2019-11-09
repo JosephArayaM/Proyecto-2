@@ -56,3 +56,10 @@ void Rutina::GenerarCod() {
 bool Rutina::determinarProg() {
 	return true;
 }
+
+string Rutina::toString() {
+	stringstream s;
+	s << "" << endl;
+
+	return s.str();
+}

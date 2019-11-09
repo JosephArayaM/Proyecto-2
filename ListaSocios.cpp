@@ -28,18 +28,54 @@ string ListaSocios::toString() {
 	return resultado;
 }
 
-Nodo* ListaSocios::getPrimero()  {
+NodoSocio* ListaSocios::getPrimero()  {
 	return primero;
 }
 
-void ListaSocios::setPrimero(Nodo* primero) {
-	ListaSocios::primero = primero;
+
+
+void ListaSocios::setPrimero(NodoSocio* primero) {
+	this->primero = primero;
 }
 
-Nodo* ListaSocios::getActual()  {
+NodoSocio* ListaSocios::getActual()  {
 	return actual;
 }
 
-void ListaSocios::setActual(Nodo* actual) {
-	ListaSocios::actual = actual;
+void ListaSocios::setActual(NodoSocio* actual) {
+	this->actual = actual;
+}
+
+void ListaSocios::insertarSocio(Socio* socio) {
+	primero = new NodoSocio(socio, primero);
+
+}
+
+bool ListaSocios::eliminarSocio(){
+	if (primero == nullptr) {
+		return false;
+	}
+	else {
+		actual = primero;
+		primero = primero->getSiguiente();
+		delete actual;
+		return true;
+	}
+}
+
+int ListaSocios::totalSocios() {
+	int totalSocios = 0;
+	actual = primero;
+
+	while (actual != nullptr) {
+		totalSocios++;
+		actual = actual->getSiguiente();
+	}
+
+	return totalSocios;
+}
+
+
+int ListaSocios::mejorResultado() {
+	
 }

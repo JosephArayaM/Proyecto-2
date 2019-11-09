@@ -1,3 +1,6 @@
+#ifndef NodoInstructor_h
+#define NodoInstructor_h
+
 #include "Instructor.h"
 
 using namespace std;
@@ -16,3 +19,5 @@ public:
 	void setSiguiente(NodoInstructor* _siguiente);
 	string toString();
 };
+
+#endif

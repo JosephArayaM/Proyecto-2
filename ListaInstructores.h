@@ -1,3 +1,6 @@
+#ifndef ListaInstructores_h
+#define NodoIListaInstructores_h
+
 #include <iostream>
 #include <sstream>
 
@@ -22,3 +25,4 @@ public:
 	bool eliminarInstructor();
 	int totalInstructores();
 };
+#endif

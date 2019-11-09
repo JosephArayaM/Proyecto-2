@@ -1,3 +1,6 @@
+#ifndef Rutina_h
+#define Rutina_h
+
 #include "Expediente.h"
 
 using namespace std;
@@ -26,4 +29,8 @@ public:
 	string MostrarRutina();
 	void GenerarCod();
 	bool determinarProg();
+
+	string toString();
 };
+
+#endif

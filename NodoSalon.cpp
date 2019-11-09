@@ -1,10 +1,9 @@
 #include "NodoSalon.h"
 
-NodoSalon::NodoSalon()
-{
+NodoSalon::NodoSalon(){
 }
 
-NodoSalon::NodoSalon( Salon& socio, NodoSalon* siguiente) {
+NodoSalon::NodoSalon( Salon* socio, NodoSalon* siguiente) {
 
 }
 NodoSalon:: ~NodoSalon(){}
@@ -15,11 +14,11 @@ Salon* NodoSalon::getSalon()
 }
 
 
-void NodoSalon::setSalon(Salon& soc) {
+void NodoSalon::setSalon(Salon* soc) {
 	NodoSalon::salon = salon;
 }
 
-NodoSalon* NodoSalon::getSiguiente() const {
+NodoSalon* NodoSalon::getSiguiente()  {
 	return siguiente;
 }
 

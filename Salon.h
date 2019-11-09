@@ -1,3 +1,6 @@
+#ifndef Salon_h
+#define Salon_h
+
 #include <sstream>
 #include <iostream>
 
@@ -29,3 +32,4 @@ class Salon {
 
 
 };
+#endif

@@ -1,4 +1,6 @@
-#include "ListaSocios.h"
+#ifndef Instructor_h
+#define Instructor_h
+
 #include"Expediente.h"
 #include "Persona.h"
 
@@ -26,3 +28,5 @@ public:
 
 
 };
+
+#endif

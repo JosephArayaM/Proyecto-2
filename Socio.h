@@ -1,6 +1,11 @@
+#ifndef Socio_h
+#define Socio_h
+
 #include<iostream>
 #include<sstream>
 #include"Persona.h"
+#include "Rutina.h"
+#include "Instructor.h"
 using namespace std;
 
 class Socio: public Persona {
@@ -9,10 +14,11 @@ class Socio: public Persona {
 		string correo;
 		string numeroTelefono;			
 		Rutina* Vigente;
+		Instructor * instructor;
 
 	public:
 
-		Socio(string, Instructor* , Rutina*, string, string, string);
+		Socio(string, string, string, string, Rutina*, Instructor*);
 		Socio();
 		~Socio();
 		string getCorreo();
@@ -20,8 +26,9 @@ class Socio: public Persona {
 		void setCorreo(string);
 		void setNumeroTelefono(string);
 		string toString();
+	
 
-		void insertarSocio();
-		void eliminarSocio();
+
 
 };
+#endif

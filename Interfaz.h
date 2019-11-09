@@ -1,3 +1,7 @@
+#ifndef Interfaz_h
+#define Interfaz_h
+
+
 #include <iostream>
 #include <sstream>
 
@@ -19,4 +23,4 @@ class Interfaz {
 
 
 };
-
+#endif

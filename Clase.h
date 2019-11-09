@@ -1,3 +1,6 @@
+#ifndef Clase_h
+#define Clase_h
+
 #include <iostream>
 #include <sstream>
 
@@ -20,3 +23,5 @@ class Clase {
 		string toString();
 
 };
+
+#endif

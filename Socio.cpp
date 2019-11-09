@@ -7,9 +7,27 @@ using namespace std;
 
 
 
+
+
+Socio::Socio(string nom , string  ide, string numTel, string cor, Rutina*, Instructor*)
+{
+	setNombre(nom);
+	setId(ide);
+	numeroTelefono = numTel;
+	correo = cor;
+	cout << "Nombre: " << getNombre() << endl;
+	cout << "Identificacion: " << getId() << endl;
+	cout << "Numero de Telefono:" << getNumeroTelefono() << endl;
+	cout << "Correo Electronico: " << getCorreo() << endl;
+
+	
+}
+
 Socio::Socio(){
 
 }
+
+
 
 Socio::~Socio() {}
 
@@ -33,11 +51,6 @@ void Socio::setNumeroTelefono(string numTel){
 	numeroTelefono = numTel;
 }
 
-
-void Socio::insertarSocio(){}
-
-
-void Socio::eliminarSocio(){}
 
 
 

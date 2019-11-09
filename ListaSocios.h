@@ -1,22 +1,34 @@
+#ifndef ListaSocios_h
+#define ListaSocios_h
+
 #include <iostream>
 #include <sstream>
 
-#include "Nodo.h"
+#include "NodoSocio.h"
 
 using namespace std;
 
 class ListaSocios {
 private:
-	Nodo* primero;
-	Nodo* actual;
+
+	NodoSocio* primero;
+	NodoSocio* actual;
 public:
 	ListaSocios();
 	ListaSocios( ListaSocios* orig);
 	virtual ~ListaSocios();
-	Nodo* getPrimero();
-	void setPrimero(Nodo* primero);
-	Nodo* getActual() ;
-	void setActual(Nodo* actual);
+	NodoSocio* getPrimero();
+	void setPrimero(NodoSocio* primero);
+	NodoSocio* getActual() ;
+	void setActual(NodoSocio* actual);
 	string toString();
 
+	void insertarSocio(Socio* socio);
+	bool eliminarSocio();
+	int totalSocios();
+
+	int mejorResultado();
+
 };
+
+#endif
