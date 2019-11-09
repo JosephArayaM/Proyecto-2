@@ -1,5 +1,5 @@
 #ifndef ListaInstructores_h
-#define NodoIListaInstructores_h
+#define ListaInstructores_h
 
 #include <iostream>
 #include <sstream>

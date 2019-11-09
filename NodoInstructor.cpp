@@ -5,10 +5,10 @@ NodoInstructor::NodoInstructor()
 {
 }
 
-NodoInstructor::NodoInstructor(Instructor* ds, NodoInstructor*loca)
+NodoInstructor::NodoInstructor(Instructor* instructor, NodoInstructor* siguiente)
 {
-	this->siguiente = loca;
-	this->instructor = ds;
+	this->siguiente = siguiente;
+	this->instructor = instructor;
 }
 
 NodoInstructor::~NodoInstructor()

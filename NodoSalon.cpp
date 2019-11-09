@@ -3,7 +3,9 @@
 NodoSalon::NodoSalon(){
 }
 
-NodoSalon::NodoSalon( Salon* socio, NodoSalon* siguiente) {
+NodoSalon::NodoSalon( Salon* salon, NodoSalon* siguiente) {
+	this->salon = salon;
+	this->siguiente = siguiente;
 
 }
 NodoSalon:: ~NodoSalon(){}
