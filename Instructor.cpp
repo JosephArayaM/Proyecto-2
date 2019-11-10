@@ -40,6 +40,14 @@ void Instructor::setPuntaje(int punt) {
 
 Instructor::~Instructor(){}
 
+Expediente* Instructor::getExpe() {
+	return expe;
+}
+
+void Instructor::setExpe(Expediente* expe) {
+	this->expe = expe;
+}
+
 string Instructor::toString(){
 	stringstream s;
 	s << "Numero de Telefono: " << numeroTelefono << endl;

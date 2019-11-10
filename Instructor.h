@@ -23,6 +23,8 @@ public:
 	void setCorreo(string);
 	void setPuntaje(int);
 	virtual ~Instructor();
+	Expediente* getExpe();
+	void setExpe(Expediente*);
 
 	 string toString();
 

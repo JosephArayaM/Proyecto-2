@@ -51,6 +51,25 @@ void Socio::setNumeroTelefono(string numTel){
 	numeroTelefono = numTel;
 }
 
+Rutina* Socio::getVigente() {
+	return Vigente;
+}
+
+Instructor* Socio::getInstructor() {
+	return instructor;
+}
+
+void Socio::setVigente(Rutina* Vigente){
+	this->Vigente = Vigente;
+}
+
+void Socio::setInstructor(Instructor* instructor){
+	this->instructor = instructor;
+}
+
+
+
+
 
 bool Socio::determinarProg(float dat) {
 	if (Vigente->getObjetivo() == 1) {

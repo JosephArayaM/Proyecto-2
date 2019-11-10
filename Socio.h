@@ -25,6 +25,11 @@ class Socio: public Persona {
 		string getNumeroTelefono();
 		void setCorreo(string);
 		void setNumeroTelefono(string);
+		Rutina* getVigente();
+		Instructor* getInstructor();
+		void setVigente(Rutina*);
+		void setInstructor(Instructor*);
+
 		bool determinarProg(float);
 		string toString();
 	
