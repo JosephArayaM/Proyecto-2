@@ -53,7 +53,8 @@ void Rutina::GenerarCod() {
 
 string Rutina::toString() {
 	stringstream s;
-	s << "" << endl;
+	s << "Objetivo:" << objetivo << endl;
+	s << "Codigo: " << randCod << endl;
 
 	return s.str();
 }
