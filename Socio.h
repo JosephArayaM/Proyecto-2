@@ -3,30 +3,29 @@
 
 #include<iostream>
 #include<sstream>
+#include "Instructor.h"
 #include"Persona.h"
 #include "Rutina.h"
-#include "Instructor.h"
+
 using namespace std;
 
 class Socio: public Persona {
 
-	private:
-		string correo;
-		string numeroTelefono;			
-		Rutina* Vigente;
-		Instructor * instructor;
+private:
+    string correo;
+    string numeroTelefono;			
+    Rutina* Vigente;
+    Instructor * instructor;
 
-	public:
-
-		Socio(string, string, string, string, Rutina*, Instructor*);
-		Socio();
-		~Socio();
-		string getCorreo();
-		string getNumeroTelefono();
-		void setCorreo(string);
-		void setNumeroTelefono(string);
-		bool determinarProg(float);
-		string toString();
+public:
+    Socio(string, string, string, string, Rutina*, Instructor*);
+    ~Socio();
+    string getCorreo();
+    string getNumeroTelefono();
+    void setCorreo(string);
+    void setNumeroTelefono(string);
+    bool determinarProg(float);
+    string toString();
 	
 
 

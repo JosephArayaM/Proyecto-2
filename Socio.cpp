@@ -5,10 +5,6 @@
 using namespace std;
 
 
-
-
-
-
 Socio::Socio(string nom , string  ide, string numTel, string cor, Rutina* rut, Instructor* ins)
 {
     Persona(nom, ide);
@@ -17,12 +13,6 @@ Socio::Socio(string nom , string  ide, string numTel, string cor, Rutina* rut, I
     Vigente = rut;
     instructor = ins;
 }
-
-Socio::Socio(){
-
-}
-
-
 
 Socio::~Socio() {}
 

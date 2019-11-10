@@ -1,5 +1,3 @@
-
-
 #ifndef Persona_h
 #define Persona_h
 
@@ -15,7 +13,6 @@ protected:
     string id;
 
 public:
-    Persona();
     Persona(string nom, string ide);
     virtual ~Persona();
     void setNombre(string);

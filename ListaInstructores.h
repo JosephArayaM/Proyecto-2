@@ -1,5 +1,5 @@
 #ifndef ListaInstructores_h
-#define ListaInstructores_h
+#define NodoIListaInstructores_h
 
 #include <iostream>
 #include <sstream>
@@ -24,5 +24,7 @@ public:
 	void insertarInstructor(Instructor* instructor);
 	bool eliminarInstructor();
 	int totalInstructores();
+        Instructor* Encontrar(string nomb);
+        Instructor* MejorResul();
 };
 #endif

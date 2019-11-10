@@ -82,3 +82,25 @@ int ListaInstructores::totalInstructores() {
 
 	return totalInstructores;
 }
+
+Instructor* ListaInstructores::Encontrar(string nomb) {
+    actual = primero;
+    while (actual != nullptr) {
+        if(actual->getInstructor()->getNombre() == nomb){
+            return actual->getInstructor();
+        }
+        actual = actual->getSiguiente();
+    }
+}
+
+Instructor* ListaInstructores::MejorResul(){
+    Instructor* ins1 =actual->getInstructor();
+    actual = primero;
+    while (actual != nullptr) {
+        if(ins1->getPuntaje()  < actual->getInstructor()->getPuntaje()){
+            ins1 = actual->getInstructor();
+        }
+        actual = actual->getSiguiente();
+    }
+    return ins1;
+}

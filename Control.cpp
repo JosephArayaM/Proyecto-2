@@ -47,13 +47,12 @@ Control::~Control() {
 
 void Control::opcInscrip() {
     bool cicloPrincipal = true;
-    int pos=1;
     while (cicloPrincipal) {
         i->imprimeInscrip();
         int opc = i->menu();
         if(opc == 1){
             system("cls");
-            string nom1,nom2, ide, cor, num, randC;
+            string nom1, nom2, ide, cor, num, randC;
             float pes, mas, gras;
             int obj;
             cout << "Digite los datos del nuevo socio " << endl;
@@ -80,12 +79,12 @@ void Control::opcInscrip() {
             cout<<"Digite el nombre del instructor a asignar al socio"<<endl;
             cin >> nom2;
             Ejercicio* Ejer1[12];
-            Expediente Exp1 = new Expediente(pes, mas, gras);
-            Rutina rut1 = new Rutina(obj,randC,Exp1,);
+            Expediente* Exp1 = new Expediente(pes, mas, gras);
+            Rutina* rut1 = new Rutina(obj,randC,Exp1, Ejer1[12]);
             rut1->LlenarVec();
             rut1->GenerarCod();
-            Socio* soc1 = new Socio(nom1, ide, num, cor, rut1, ListaIns->Encontrar(nom2));
-            
+            Instructor* ins1 = ListaIns->Encontrar(nom2);
+            Socio* soc1 = new Socio(nom1, ide, num, cor, rut1, ins1);
             system("pause");
         } else {
             cicloPrincipal = false;
@@ -102,6 +101,20 @@ void Control::opcIns() {
         if(opc == 1){
             system("cls");
             cout << "Funciona" << endl;
+            system("pause");
+        } else if(opc == 2){
+            system("cls");
+            cout << ListaIns->toString();
+            system("pause");
+        }else if(opc == 3){
+            system("cls");
+            opcRut();
+            system("pause");
+        }else if(opc == 4){
+            system("cls");
+            Instructor* inst;
+            inst = ListaIns->MejorResul();
+            cout << inst->toString();
             system("pause");
         } else {
             cicloPrincipal = false;
