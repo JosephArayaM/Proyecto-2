@@ -1,10 +1,9 @@
 #include "Instructor.h"
-#include "Persona.h"
 
-Instructor::Instructor(string nom, string ide, int punt, ListaSocios* soci){
+Instructor::Instructor(string nom, string ide, int punt){
     Persona(nom, ide);
     puntaje = punt;
-	
+    soc = new ListaSocios();
 }
 
 int Instructor::getPuntaje() {
@@ -13,6 +12,10 @@ int Instructor::getPuntaje() {
 
 void Instructor::setPuntaje(int punt) {
 	puntaje = punt;
+}
+
+Void instructor::fijarListaSocios(listaSocios* ls){
+Soc=ls;
 }
 
 Instructor::~Instructor(){}
@@ -24,7 +27,7 @@ string Instructor::toString(){
  	return s.str();
 }
 
-void Instructor::DetPunt(float data){
+/*void Instructor::DetPunt(){
     soc->setActual(soc->getPrimero());
     while(soc->getActual() != NULL){
         if(soc->getActual()->getSocio()->determinarProg(data) == true){
@@ -32,4 +35,4 @@ void Instructor::DetPunt(float data){
         }
         soc->setActual(soc->getActual()->getSiguiente());
     }
-}
+}*/

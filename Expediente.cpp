@@ -34,10 +34,3 @@ void Expediente::SetPeso(float peso) {
 float Expediente::GetPeso()  {
 	return peso;
 }
-string Expediente::toString() {
-	stringstream s;
-	s << "Peso: " << peso << endl;
-	s << "Masa Muscular: " << masaMusc << endl;
-	s << "Grasa Corporal: " << grasaCor << endl;
-	return s.str();
-}

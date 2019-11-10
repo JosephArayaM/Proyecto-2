@@ -62,8 +62,8 @@ bool ListaRutinas::eliminarRutina() {
 
 int ListaRutinas::totalRutinas(){
 	int totalRutinas = 0;
-	actual = primero;
-	while (actual != nullptr) {
+	primero = actual;
+	while (primero != nullptr) {
 		totalRutinas++;
 		actual = actual->getSiguiente();
 	}

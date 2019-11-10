@@ -1,24 +1,24 @@
 #ifndef Socio_h
 #define Socio_h
 
+#include"Persona.h"
+#include"Rutina.h"
+#include"Instructor.h"
 #include<iostream>
 #include<sstream>
-#include "Instructor.h"
-#include"Persona.h"
-#include "Rutina.h"
+
 
 using namespace std;
 
 class Socio: public Persona {
-
 private:
     string correo;
-    string numeroTelefono;			
+    string numeroTelefono;
+    Instructor* inst;
     Rutina* Vigente;
-    Instructor * instructor;
-
 public:
-    Socio(string, string, string, string, Rutina*, Instructor*);
+    Socio();
+    Socio(string nom , string  ide, string numTel, string cor, Rutina* rut, Instructor* ins);
     ~Socio();
     string getCorreo();
     string getNumeroTelefono();

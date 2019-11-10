@@ -28,7 +28,6 @@ void Interfaz::imprimeMenu() {
 
 void Interfaz::imprimeInscrip(){
     system("cls");
-    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "-------Bienvenido al sistema de inscripciones-------" << endl;
     cout << "----------------------------------------------------" << endl;
@@ -42,7 +41,6 @@ void Interfaz::imprimeInscrip(){
 
 void Interfaz::imprimeIns() {
     system("cls");
-    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "-------------Menu de Instructores-------------------" << endl;
     cout << "----------------------------------------------------" << endl;
@@ -59,11 +57,10 @@ void Interfaz::imprimeIns() {
 
 void Interfaz::imprimeSoc() {
     system("cls");
-    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "-----------------Menu de Socios---------------------" << endl;
     cout << "----------------------------------------------------" << endl;
-    cout << "1) - Mostrar la lista de Socios" << endl;
+    cout << "1) - Mostrar la lista de Socios de un instructor" << endl;
     cout << "2) - Mostrar un socio" << endl;
     cout << "3) - Mostrar la rutina de un socio" << endl;
     cout << "4) - Salir " << endl;
@@ -75,7 +72,6 @@ void Interfaz::imprimeSoc() {
 
 void Interfaz::imprimeCla() {
     system("cls");
-    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "----------------Menu de Clases----------------------" << endl;
     cout << "----------------------------------------------------" << endl;
@@ -91,7 +87,6 @@ void Interfaz::imprimeCla() {
 
 void Interfaz::imprimeRut() {
     system("cls");
-    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "-----------------Menu de Rutinas--------------------" << endl;
     cout << "----------------------------------------------------" << endl;
@@ -106,7 +101,6 @@ void Interfaz::imprimeRut() {
 
 void Interfaz::imprimeSal(){
     system("cls");
-    cout << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "-----------------Menu de Salones--------------------" << endl;
     cout << "----------------------------------------------------" << endl;

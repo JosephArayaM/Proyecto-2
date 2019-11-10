@@ -1,4 +1,4 @@
-#include "Control.h"
+#include"Control.h"
 
 Control::Control() {
     //Objetos Predeterminados
@@ -80,11 +80,11 @@ void Control::opcInscrip() {
             cin >> nom2;
             Ejercicio* Ejer1[12];
             Expediente* Exp1 = new Expediente(pes, mas, gras);
-            Rutina* rut1 = new Rutina(obj,randC,Exp1, Ejer1[12]);
+            Rutina* rut1 = new Rutina(obj, randC, Exp1, Ejer1[12]);
             rut1->LlenarVec();
             rut1->GenerarCod();
-            Instructor* ins1 = ListaIns->Encontrar(nom2);
-            Socio* soc1 = new Socio(nom1, ide, num, cor, rut1, ins1);
+            //Instructor* ins1 = ListaIns->Encontrar(nom2);
+            //Socio* soc1 = new Socio(nom1, ide, num, cor, rut1, ins1);
             system("pause");
         } else {
             cicloPrincipal = false;
@@ -123,7 +123,31 @@ void Control::opcIns() {
 }
 
 void Control::opcSoc() {
-	
+    bool cicloPrincipal = true;
+    int pos=1;
+    while (cicloPrincipal) {
+        i->imprimeInscrip();
+        int opc = i->menu();
+        if(opc == 1){
+            system("cls");
+            cout << "Funciona" << endl;
+            system("cls");
+        } else if(opc == 2){
+            system("cls");
+            Instructor* inst;
+            inst = ListaIns->MejorResul();
+            cout << inst->toString();
+            system("pause");
+        } else if(opc == 3){
+            system("cls");
+            Instructor* inst;
+            inst = ListaIns->MejorResul();
+            cout << inst->toString();
+            system("pause");
+        } else {
+            cicloPrincipal = false;
+        }
+    }
 }
 
 void Control::opcRut() {
