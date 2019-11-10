@@ -53,7 +53,39 @@ void Control::opcInscrip() {
         int opc = i->menu();
         if(opc == 1){
             system("cls");
-            cout << "Funciona" << endl;
+            string nom1,nom2, ide, cor, num, randC;
+            float pes, mas, gras;
+            int obj;
+            cout << "Digite los datos del nuevo socio " << endl;
+            cout << "Nombre: "<<endl;;
+            cin >> nom1;
+            cout << "ID: "<< endl;
+            cin >> ide;
+            cout << "Numero de telefono: "<< endl;
+            cin >> num;
+            cout << "Correo electronico: "<< endl;
+            cin >> cor;
+            cout << "Peso: "<<endl;
+            cin >> pes;
+            cout << "Masa muscular: "<<endl;
+            cin >> mas;
+            cout << "Grasa: "<<endl;
+            cin >> gras;
+            cout << "Cual va a ser el objetivo ?: "<<endl;
+            cout << "(1 para bajar grasa y  2 para subir masa muscular)"<<endl;
+            cin >> obj;
+            system("cls");
+            cout<<"Los instructores son: "<<endl;
+            cout<<ListaIns->toString();
+            cout<<"Digite el nombre del instructor a asignar al socio"<<endl;
+            cin >> nom2;
+            Ejercicio* Ejer1[12];
+            Expediente Exp1 = new Expediente(pes, mas, gras);
+            Rutina rut1 = new Rutina(obj,randC,Exp1,);
+            rut1->LlenarVec();
+            rut1->GenerarCod();
+            Socio* soc1 = new Socio(nom1, ide, num, cor, rut1, ListaIns->Encontrar(nom2));
+            
             system("pause");
         } else {
             cicloPrincipal = false;

@@ -8,23 +8,14 @@ using namespace std;
 
 class Instructor :public Persona {
 private:
-	string numeroTelefono;
-	string correo;
 	int puntaje;
-	Expediente* expe;
-
+	ListaSocios* soc;
 public:
 	Instructor();
-	Instructor(string, string, string,string,int, Expediente* expe);
-	string getNumeroTelefono();
-	string getCorreo();
+	Instructor(string, string, int, ListaSocios* soci);
 	int getPuntaje();
-	void setNumeroTelefono(string);
-	void setCorreo(string);
 	void setPuntaje(int);
 	virtual ~Instructor();
-	Expediente* getExpe();
-	void setExpe(Expediente*);
 
 	 string toString();
 

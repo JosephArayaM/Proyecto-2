@@ -11,18 +11,18 @@ using namespace std;
 
 class Persona{
 protected:
-	string nombre;
-	string id;
+    string nombre;
+    string id;
 
 public:
-	Persona() {	}
-	Persona(string , string );
-	virtual ~Persona();
-	void setNombre(string);
-	string getNombre();
-	void setId(string id);
-	string getId();
-	virtual string toString();
+    Persona();
+    Persona(string nom, string ide);
+    virtual ~Persona();
+    void setNombre(string);
+    string getNombre();
+    void setId(string id);
+    string getId();
+    virtual string toString();
 
 
 };

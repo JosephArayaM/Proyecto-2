@@ -14,15 +14,17 @@
 #include "ListaRutinas.h"
 #include "ListaSalones.h"
 #include "Fecha.h"
+#include "ListaClases.h"
 
 class Control {
 public:
     Interfaz* i = new Interfaz;
-    /*
-    ListaInstructores* ListIns = new ListaInstructores();
+    ListaInstructores* ListaIns = new ListaInstructores();
     ListaSocios* ListaSoc = new ListaSocios();
     ListaRutinas* ListaRut = new ListaRutinas();
-    ListaSalones* listaSal = new ListaSalones();*/
+    ListaSalones* ListaSal = new ListaSalones();
+    ListaClases* ListaCla = new ListaClases();
+    
     Control();
     void opciones();
     void opcInscrip();
