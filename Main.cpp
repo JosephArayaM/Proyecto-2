@@ -59,15 +59,15 @@ int main() {
 
 	//cout << "Lista de Rutinas [" << listaRutinas->totalRutinas() << "] \n" << listaRutinas->toString() << endl;
 
-	//// Se elimina el instructor
+	//// Se elimina la rutina
 	//listaRutinas->eliminarRutina();
-	//cout << "Lista de instructores [" << listaRutinas->totalRutinas() << "] \n" << listaRutinas->toString() << endl;
+	//cout << "Lista de Rutinas [" << listaRutinas->totalRutinas() << "] \n" << listaRutinas->toString() << endl;
 
 
 
 	//// Se elimina toda la lista
 	//delete(listaRutinas);
-	//cout << "Lista de Instructores [" << listaRutinas->totalRutinas() << "] \n" << listaRutinas->toString() << endl;
+	//cout << "Lista de Rutinas [" << listaRutinas->totalRutinas() << "] \n" << listaRutinas->toString() << endl;
 
 
 	////-------------------------------------------------------------------------------------------
@@ -88,15 +88,15 @@ int main() {
 
 	//cout << "Lista de Socios [" << listaSocios->totalSocios() << "] \n" << listaSocios->toString() << endl;
 
-	//// Se elimina el instructor
+	//// Se elimina el socio
 	//listaSocios->eliminarSocio();
-	//cout << "Lista de instructores [" << listaSocios->totalSocios() << "] \n" << listaSocios->toString() << endl;
+	//cout << "Lista de Socios [" << listaSocios->totalSocios() << "] \n" << listaSocios->toString() << endl;
 
 
 
 	//// Se elimina toda la lista
 	//delete(listaSocios);
-	//cout << "Lista de Instructores [" << listaSocios->totalSocios() << "] \n" << listaSocios->toString() << endl;
+	//cout << "Lista de Socios [" << listaSocios->totalSocios() << "] \n" << listaSocios->toString() << endl;
 
 
 
@@ -104,8 +104,59 @@ int main() {
 
 	//---------------------------------------------------------------------------------------------------------
 	
-	
+	//Clase* clase1 = new Clase(8,10);
+	//Clase* clase2 = new Clase(10,12);
+	//Clase* clase3 = new Clase(12,2);
+	//Clase* clase4 = new Clase(2,4);
+	//Clase* clase5 = new Clase(4,6);
 
+	//ListaClases* listaClases = new ListaClases();
+
+	//listaClases->insertarClase(clase1);
+	//listaClases->insertarClase(clase2);
+	//listaClases->insertarClase(clase3);
+	//listaClases->insertarClase(clase4);
+	//listaClases->insertarClase(clase5);
+
+	//cout << "Lista de Clases [" << listaClases->totalClases() << "] \n" << listaClases->toString() << endl;
+
+	//// Se elimina el instructor
+	//listaClases->eliminarClase();
+	//cout << "Lista de Clases [" << listaClases->totalClases() << "] \n" << listaClases->toString() << endl;
+
+
+
+	//// Se elimina toda la lista
+	//delete(listaClases);
+	//cout << "Lista de Clases [" << listaClases->totalClases() << "] \n" << listaClases->toString() << endl;
+
+
+	//---------------------------------------------------------------------------------------------------
+	//Salon* salon1 = new Salon("Colibri","A11",10);
+	//Salon* salon2 = new Salon("Jaguar", "A12", 15);
+	//Salon* salon3 = new Salon("Danta", "A13", 20);
+	//Salon* salon4 = new Salon("Gavilan", "A14", 20);
+	//Salon* salon5 = new Salon("Ballena", "A15", 25);
+
+	//ListaSalones* listaSalones = new ListaSalones();
+
+	//listaSalones->insertarSalon(salon1);
+	//listaSalones->insertarSalon(salon2);
+	//listaSalones->insertarSalon(salon3);
+	//listaSalones->insertarSalon(salon4);
+	//listaSalones->insertarSalon(salon5);
+
+	//cout << "Lista de Salones [" << listaSalones->totalSalones() << "] \n" << listaSalones->toString() << endl;
+
+	//// Se elimina el salon
+	//listaSalones->eliminarSalon();
+	//cout << "Lista de Salones [" << listaSalones->totalSalones() << "] \n" << listaSalones->toString() << endl;
+
+
+
+	//// Se elimina toda la lista
+	//delete(listaSalones);
+	//cout << "Lista de Salones [" << listaSalones->totalSalones() << "] \n" << listaSalones->toString() << endl;
 
 
 	return 0;
