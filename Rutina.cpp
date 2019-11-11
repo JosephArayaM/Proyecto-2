@@ -59,3 +59,22 @@ string Rutina::toString() {
 
 	return s.str();
 }
+
+void Rutina::LlenarVec(){
+    string nom, rep;
+    double pes;
+    for(int i= 0; i < 12; i++){
+        system("cls");
+        cout<<"Digite los datos del ejercicio: "<<endl;
+        cout<<endl;
+        cout<<"Nombre del ejercicio: "<<endl;
+        cin>>nom;
+        cout<<"Cantidad de repeticiones: "<<endl;
+        cin>>rep;
+        cout<<"Peso que debe utilizar: "<<endl;
+        cin>>pes;
+        vec[i]->setNombreEjercicio(nom);
+        vec[i]->setRepeticiones(rep);
+        vec[i]->setPeso(pes);
+    }
+}

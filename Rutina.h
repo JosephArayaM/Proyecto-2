@@ -33,7 +33,7 @@ public:
 
 
 	void GenerarCod();
-
+        void LlenarVec();
 	string toString();
 };
 
