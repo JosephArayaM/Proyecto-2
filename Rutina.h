@@ -21,7 +21,7 @@ private:
 
 public:
 	Rutina();
-	Rutina(int, string, Expediente*,Ejercicio*);
+	Rutina(int, string, Expediente*);
 	virtual ~Rutina();
 	
 	int getObjetivo();

@@ -12,14 +12,12 @@ private:
 
 public:
 	Instructor();
-	Instructor(string, string, string, string, int );
+	Instructor(string, string, string, string, int);
 	int getPuntaje();
 	string getNumeroTelefono();
 	void setNumeroTelefono(string);
 	void setPuntaje(int);
 	virtual ~Instructor();
-	Expediente* getExpe();
-	void setExpe(Expediente*);
 
 
 	string toString();

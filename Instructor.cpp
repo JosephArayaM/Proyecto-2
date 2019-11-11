@@ -5,11 +5,14 @@
 Instructor::Instructor() {
 
 }
-Instructor::Instructor(string nom, string ide, string numTel, int punt) {
-	Persona(nom, ide);
+Instructor::Instructor(string nom, string ide, string numTel, string cor, int punt) {
+	setNombre(nom);
+	setId(ide);
 	numeroTelefono = numTel;
 	puntaje = punt;
-	
+	cout << "Nombre: " << getNombre() << endl;
+	cout << "Identificacion: " << getId() << endl;
+	cout << "Numero de Telefono:" << getNumeroTelefono() << endl;
 }
 
 string Instructor::getNumeroTelefono() {
@@ -32,13 +35,6 @@ void Instructor::setPuntaje(int punt) {
 
 Instructor::~Instructor() {}
 
-Expediente* Instructor::getExpe() {
-	return expe;
-}
-
-void Instructor::setExpe(Expediente* expe) {
-	this->expe = expe;
-}
 
 
 string Instructor::toString() {
