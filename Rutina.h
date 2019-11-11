@@ -7,6 +7,7 @@
 #include <time.h>
 #include "Expediente.h"
 #include "Ejercicio.h"
+#include "Expediente.h"
 
 using namespace std;
 
@@ -30,7 +31,6 @@ public:
 	string GetRandCod() ;
 	Expediente* getDatos();
 	void setDatos(Expediente* datos);
-
 
 	void GenerarCod();
         void LlenarVec();

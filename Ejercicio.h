@@ -9,22 +9,22 @@ class Ejercicio {
 	private:
 		string nombreEjercicio;
 		string repeticiones;
-		double peso;
+		float peso;
 
 
 	public:
 
-		Ejercicio(string, string, double);
+		Ejercicio(string, string, float);
 		Ejercicio();
 		virtual~Ejercicio();
 
 		string getNombreEjercicio();
 		string getRepeticiones();
-		double getPeso();
+		float getPeso();
 
 		void setNombreEjercicio(string);
 		void setRepeticiones(string);
-		void setPeso(double);
+		void setPeso(float);
 
 		string toString();
 

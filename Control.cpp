@@ -1,3 +1,5 @@
+#include <valarray>
+
 #include"Control.h"
 
 Control::Control() {
@@ -52,8 +54,8 @@ void Control::opcInscrip() {
         int opc = i->menu();
         if(opc == 1){
             system("cls");
-            string nom1, nom2, ide, cor, num, randC;
-            float pes, mas, gras;
+            string nom1, nom2, nom3, ide, cor, num, randC, rep1;
+            float pes1, mas, gras, pes2;
             int obj;
             cout << "Digite los datos del nuevo socio " << endl;
             cout << "Nombre: "<<endl;;
@@ -65,7 +67,7 @@ void Control::opcInscrip() {
             cout << "Correo electronico: "<< endl;
             cin >> cor;
             cout << "Peso: "<<endl;
-            cin >> pes;
+            cin >> pes1;
             cout << "Masa muscular: "<<endl;
             cin >> mas;
             cout << "Grasa: "<<endl;
@@ -78,13 +80,17 @@ void Control::opcInscrip() {
             cout<<ListaIns->toString();
             cout<<"Digite el nombre del instructor a asignar al socio"<<endl;
             cin >> nom2;
-            Ejercicio* Ejer1[12];
-            Expediente* Exp1 = new Expediente(pes, mas, gras);
-            Rutina* rut1 = new Rutina(obj, randC, Exp1, Ejer1[12]);
-            rut1->LlenarVec();
+            
+            Expediente* Exp1 = new Expediente(pes1, mas, gras);
+            Rutina* rut1 = new Rutina();
+            rut1->SetRandCod(randC);
+            rut1->setDatos(Exp1);
+            rut1->setObjetivo(obj);
             rut1->GenerarCod();
-            //Instructor* ins1 = ListaIns->Encontrar(nom2);
-            //Socio* soc1 = new Socio(nom1, ide, num, cor, rut1, ins1);
+            rut1->LlenarVec();
+            Instructor* ins1 = new Instructor();
+            ins1 = ListaIns->Encontrar(nom2);
+            Persona* soc1 = new Socio(nom1, ide, num, cor, rut1, ins1);
             system("pause");
         } else {
             cicloPrincipal = false;

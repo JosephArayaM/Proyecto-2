@@ -11,8 +11,6 @@ Rutina::Rutina(int obje, string racod, Expediente* exped) {
 	datos = exped;
 }
 
-
-
 Rutina::~Rutina() {}
 
 int Rutina::getObjetivo() {
@@ -62,9 +60,9 @@ string Rutina::toString() {
 
 void Rutina::LlenarVec(){
     string nom, rep;
-    double pes;
+    float pes;
+    system("cls");
     for(int i= 0; i < 12; i++){
-        system("cls");
         cout<<"Digite los datos del ejercicio: "<<endl;
         cout<<endl;
         cout<<"Nombre del ejercicio: "<<endl;
@@ -73,6 +71,7 @@ void Rutina::LlenarVec(){
         cin>>rep;
         cout<<"Peso que debe utilizar: "<<endl;
         cin>>pes;
+        cout<<endl;
         vec[i]->setNombreEjercicio(nom);
         vec[i]->setRepeticiones(rep);
         vec[i]->setPeso(pes);
