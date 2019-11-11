@@ -5,14 +5,11 @@
 Instructor::Instructor() {
 
 }
-Instructor::Instructor(string nom, string ide, string numTel, string cor, int punt, Expediente* expe) {
-	setNombre(nom);
-	setId(ide);
+Instructor::Instructor(string nom, string ide, string numTel, int punt) {
+	Persona(nom, ide);
 	numeroTelefono = numTel;
 	puntaje = punt;
-	cout << "Nombre: " << getNombre() << endl;
-	cout << "Identificacion: " << getId() << endl;
-	cout << "Numero de Telefono:" << getNumeroTelefono() << endl;
+	
 }
 
 string Instructor::getNumeroTelefono() {

@@ -5,9 +5,13 @@ Rutina::Rutina(){
 	
 }
 
-Rutina::Rutina(int obje, string racod, Expediente* , Ejercicio* ) {
+Rutina::Rutina(int obje, string racod, Expediente* exped, Ejercicio* ejer[12]) {
 	objetivo = obje;
 	randCod = racod;
+	datos = exped;
+	for(int i = 0; i < 12; i++){
+		vec[i] = ejer[i];
+	}
 }
 
 
