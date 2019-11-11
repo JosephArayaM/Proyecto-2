@@ -5,14 +5,15 @@
 using namespace std;
 
 
-Socio::Socio(string nom , string  ide, string numTel, string cor, Rutina* rut, Instructor* ins)
-{
-    Persona(nom, ide);
-    numeroTelefono = numTel;
-    correo = cor;
-    Vigente = rut;
-    instructor = ins;
+Socio::Socio(string nom, string  ide, string numTel, string cor, Rutina* rut, Instructor* ins){
+	Persona(nom, ide);
+	numeroTelefono = numTel;
+	correo = cor;
+	Vigente = rut;
+	instructor = ins;
 }
+
+Socio::Socio(){}
 
 Socio::~Socio() {}
 
@@ -28,12 +29,28 @@ string Socio::getNumeroTelefono()
 }
 
 
-void Socio::setCorreo(string cor1){
+void Socio::setCorreo(string cor1) {
 	correo = cor1;
 }
 
-void Socio::setNumeroTelefono(string numTel){
+void Socio::setNumeroTelefono(string numTel) {
 	numeroTelefono = numTel;
+}
+
+Rutina* Socio::getVigente() {
+	return Vigente;
+}
+
+Instructor* Socio::getInstructor() {
+	return instructor;
+}
+
+void Socio::setVigente(Rutina* Vigente) {
+	this->Vigente = Vigente;
+}
+
+void Socio::setInstructor(Instructor* instructor) {
+	this->instructor = instructor;
 }
 
 
@@ -55,12 +72,12 @@ bool Socio::determinarProg(float dat) {
 
 
 
-string Socio::toString(){
+string Socio::toString() {
 	stringstream s;
-        s << Persona::toString();
+	s << Persona::toString();
 	s << "Correo Electronico: " << correo << endl;
 	s << "Numero de Telefono: " << numeroTelefono << endl;
-        s << endl;
+	s << endl;
 	return s.str();
-	
+
 }

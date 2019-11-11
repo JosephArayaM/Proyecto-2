@@ -1,9 +1,15 @@
 #include "Persona.h"
 
+Persona::Persona() {
+	nombre = " ";
+	string id = " ";
+}
+
 Persona::Persona(string nom, string ide) {
 	nombre = nom;
 	id=ide;
 }
+
 
 Persona::~Persona(){}
 

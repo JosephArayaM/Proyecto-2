@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <sstream>
+
 #include "NodoInstructor.h"
 
 using namespace std;
@@ -15,15 +16,15 @@ public:
 	ListaInstructores();
 	ListaInstructores(ListaInstructores* orig);
 	virtual ~ListaInstructores();
-	NodoInstructor* getPrimero() ;
+	NodoInstructor* getPrimero();
 	void setPrimero(NodoInstructor* primero);
-	NodoInstructor* getActual() ;
+	NodoInstructor* getActual();
 	void setActual(NodoInstructor* actual);
 	string toString();
 	void insertarInstructor(Instructor* instructor);
 	bool eliminarInstructor();
 	int totalInstructores();
-        Instructor* Encontrar(string nomb);
-        Instructor* MejorResul();
+	Instructor* Encontrar(string nomb);
+	Instructor* MejorResul();
 };
 #endif

@@ -1,24 +1,33 @@
 #ifndef Instructor_h
 #define Instructor_h
 
-#include"Persona.h"
-#include"ListaSocios.h"
+#include"Expediente.h"
+#include "Persona.h"
 
 using namespace std;
 
-class Instructor: public Persona {
+class Instructor :public Persona {
 private:
-    int puntaje;
-    ListaSocios* soc;
+	string numeroTelefono;
+	int puntaje;
+	Expediente* expe;
+
 public:
-    Instructor();
-    Instructor(string, string ,int ); 
-    int getPuntaje();
-    void fijar(ListaSocios* ls);
-    void setPuntaje(int);
-    virtual ~Instructor();
-    void DetPunt();
-    string toString();
+	Instructor();
+	Instructor(string, string, string, string, int, Expediente* expe);
+	int getPuntaje();
+	string getNumeroTelefono();
+	void setNumeroTelefono(string);
+	void setPuntaje(int);
+	virtual ~Instructor();
+	Expediente* getExpe();
+	void setExpe(Expediente*);
+
+
+	string toString();
+
+
 };
 
 #endif
+

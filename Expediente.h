@@ -26,7 +26,7 @@ public:
 	float GetMasaMusc();
 	void SetPeso(float peso);
 	float GetPeso();
-        
+	string toString();
 
 
 };

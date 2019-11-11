@@ -5,7 +5,7 @@ ListaInstructores::ListaInstructores() {
 	actual = nullptr;
 }
 
-ListaInstructores::ListaInstructores( ListaInstructores* orig) {
+ListaInstructores::ListaInstructores(ListaInstructores* orig) {
 }
 
 ListaInstructores::~ListaInstructores() {
@@ -29,7 +29,7 @@ string ListaInstructores::toString() {
 	return resultado;
 }
 
-NodoInstructor* ListaInstructores::getPrimero()  {
+NodoInstructor* ListaInstructores::getPrimero() {
 	return primero;
 }
 
@@ -37,7 +37,7 @@ void ListaInstructores::setPrimero(NodoInstructor* primero) {
 	ListaInstructores::primero = primero;
 }
 
-NodoInstructor* ListaInstructores::getActual()  {
+NodoInstructor* ListaInstructores::getActual() {
 	return actual;
 }
 
@@ -46,7 +46,7 @@ void ListaInstructores::setActual(NodoInstructor* actual) {
 }
 
 
-void ListaInstructores::insertarInstructor( Instructor* instructor) {
+void ListaInstructores::insertarInstructor(Instructor* instructor) {
 	actual = new NodoInstructor(instructor, nullptr);
 	if (primero == nullptr) {
 		primero = actual;
@@ -84,23 +84,23 @@ int ListaInstructores::totalInstructores() {
 }
 
 Instructor* ListaInstructores::Encontrar(string nomb) {
-    actual = primero;
-    while (actual != nullptr) {
-        if(actual->getInstructor()->getNombre() == nomb){
-            return actual->getInstructor();
-        }
-        actual = actual->getSiguiente();
-    }
+	actual = primero;
+	while (actual != nullptr) {
+		if (actual->getInstructor()->getNombre() == nomb) {
+			return actual->getInstructor();
+		}
+		actual = actual->getSiguiente();
+	}
 }
 
-Instructor* ListaInstructores::MejorResul(){
-    Instructor* ins1 =actual->getInstructor();
-    actual = primero;
-    while (actual != nullptr) {
-        if(ins1->getPuntaje()  < actual->getInstructor()->getPuntaje()){
-            ins1 = actual->getInstructor();
-        }
-        actual = actual->getSiguiente();
-    }
-    return ins1;
+Instructor* ListaInstructores::MejorResul() {
+	Instructor* ins1 = actual->getInstructor();
+	actual = primero;
+	while (actual != nullptr) {
+		if (ins1->getPuntaje() < actual->getInstructor()->getPuntaje()) {
+			ins1 = actual->getInstructor();
+		}
+		actual = actual->getSiguiente();
+	}
+	return ins1;
 }

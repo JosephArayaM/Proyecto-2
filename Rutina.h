@@ -30,8 +30,8 @@ public:
 	string GetRandCod() ;
 	Expediente* getDatos();
 	void setDatos(Expediente* datos);
-        
-        void LlenarVec();
+
+
 	void GenerarCod();
 
 	string toString();
