@@ -5,30 +5,30 @@
 
 class ListaSalones {
 
-	private:
-		NodoSalon* primero;
-		NodoSalon* actual;
+private:
+	NodoSalon* primero;
+	NodoSalon* actual;
 
 
-	public:
-		ListaSalones();
-		ListaSalones(ListaSalones* orig);
-		virtual~ListaSalones();
-		NodoSalon* getPrimero();
-		NodoSalon* getActual();
+public:
+	ListaSalones();
+	ListaSalones(ListaSalones* orig);
+	virtual~ListaSalones();
+	NodoSalon* getPrimero();
+	NodoSalon* getActual();
 
-		void setPrimero(NodoSalon* primero);
-		void setActual(NodoSalon* actual);
-                void insertarClase(Clase* clas1, string nomb);
-		void insertarSalon(Salon* salon);
-                void mostrarSalon(string nomb);
-		bool eliminarSalon();
+	void setPrimero(NodoSalon* primero);
+	void setActual(NodoSalon* actual);
+	void insertarClase(Clase* clas1, string nomb);
+	void insertarSalon(Salon* salon);
+	void mostrarSalon(string nomb);
+	bool eliminarSalon();
 
-		int totalSalones();
+	int totalSalones();
 
-		string toString();
-                virtual void  salvarSalones(); //Escribir en archivo
-		virtual void recuperarSalones(); //Leer de Archivo
+	string toString();
+	virtual void  salvarSalones(); //Escribir en archivo
+	virtual void recuperarSalones(); //Leer de Archivo
 
 
 

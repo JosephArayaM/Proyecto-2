@@ -17,17 +17,21 @@ private:
 
 public:
 	ListaSocios();
-	ListaSocios( ListaSocios* orig);
+	ListaSocios(ListaSocios* orig);
 	virtual ~ListaSocios();
 	NodoSocio* getPrimero();
 	void setPrimero(NodoSocio* primero);
-	NodoSocio* getActual() ;
+	NodoSocio* getActual();
 	void setActual(NodoSocio* actual);
 	string toString();
-        Socio* Encontrar();
+	Socio* Encontrar();
 	void insertarSocio(Socio* socio);
 	bool eliminarSocio();
 	int totalSocios();
+
+	virtual void  salvarSocios(); //Escribir en archivo
+	virtual void recuperarSocios(); //Leer de Archivo
+
 
 
 

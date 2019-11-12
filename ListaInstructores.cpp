@@ -104,3 +104,52 @@ Instructor* ListaInstructores::MejorResul() {
 	}
 	return ins1;
 }
+
+void ListaInstructores::salvarInstructores() {
+	//1-crear un archivo de salida para grabar
+	ofstream os("ListadeInstructores.txt", ios::out);
+
+	//2- Ver si se pudo abrir
+	if (os) {//si se pudo abrir
+		actual = primero;
+		while (actual != nullptr) {
+			os << actual->getInstructor()->getNombre();
+			os << actual->getInstructor()->getId();
+			os << actual->getInstructor()->getNumeroTelefono();
+			os << actual->getInstructor()->getPuntaje();
+		}
+		os.close(); //Cerrar el archivo una vez grabado
+
+
+	}
+	else {
+
+		cout << "No se pudo abrir" << endl;
+	}
+
+}
+
+void ListaInstructores::recuperarInstructores() {
+
+
+	this->eliminarInstructor();  // este metodo auto-limpia el contened.
+
+	Instructor ins;
+	ifstream is("ListadeInstructores.txt", ios::in);
+	if (is) {
+		is >> ins;
+		while (!is.eof()) {
+
+			Instructor* instr = new Instructor(ins.getNombre(), ins.getId(), ins.getNumeroTelefono(),ins.getPuntaje());
+			this->insertarInstructor(instr);
+			is >> ins;
+		}
+		is.close();
+	}
+	else {
+		cout << "No se pudo abrir para lectura...." << endl;
+
+
+	}
+
+}

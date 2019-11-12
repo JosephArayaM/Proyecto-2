@@ -10,7 +10,9 @@ Instructor::Instructor(string nom, string ide, string numTel, int punt) {
 	setId(ide);
 	numeroTelefono = numTel;
 	puntaje = punt;
-	
+	cout << "Nombre: " << getNombre() << endl;
+	cout << "Identificacion: " << getId() << endl;
+	cout << "Numero de Telefono:" << getNumeroTelefono() << endl;
 }
 
 string Instructor::getNumeroTelefono() {
@@ -41,3 +43,13 @@ string Instructor::toString() {
 	s << endl;
 	return s.str();
 }
+
+//Grabar sobre archivo en el disco duro
+ostream& operator<<(ostream& out, const Instructor& ins) {
+	return out << ins.nombre << endl << ins.id << endl << ins.numeroTelefono << endl << ins.puntaje << endl;
+}
+
+istream& operator>>(istream& in, Instructor& ins) {
+	return in >> ins.nombre >> ins.id >> ins.numeroTelefono >> ins.puntaje;
+}
+

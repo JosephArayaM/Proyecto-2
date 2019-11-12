@@ -29,11 +29,12 @@ public:
 	Instructor* getInstructor();
 	void setVigente(Rutina*);
 	void setInstructor(Instructor*);
-        void ActualizarDatos(Rutina* nuevo);
+	void ActualizarDatos(Rutina* nuevo);
 	bool determinarProg(float);
 	string toString();
 
-
+	friend ostream& operator<<(ostream&, const Socio&);
+	friend istream& operator>>(istream&, Socio&);
 
 
 };

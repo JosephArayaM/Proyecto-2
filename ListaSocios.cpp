@@ -76,3 +76,53 @@ int ListaSocios::totalSocios() {
 }
 
 
+void ListaSocios::salvarSocios() {
+	//1-crear un archivo de salida para grabar
+	ofstream os("ListadeSocios.txt", ios::out);
+
+	//2- Ver si se pudo abrir
+	if (os) {//si se pudo abrir
+		actual = primero;
+		while (actual != nullptr) {
+			os << actual->getSocio()->getNombre();
+			os << actual->getSocio()->getId();
+			os << actual->getSocio()->getCorreo();
+			os << actual->getSocio()->getNumeroTelefono();
+			os << actual->getSocio()->getVigente();
+			os << actual->getSocio()->getInstructor();
+		}
+		os.close(); //Cerrar el archivo una vez grabado
+
+
+	}
+	else {
+
+		cout << "No se pudo abrir" << endl;
+	}
+
+}
+
+void ListaSocios::recuperarSocios() {
+
+
+	this->eliminarSocio(); 
+
+	Socio soc;
+	ifstream is("ListadeSocios.txt", ios::in);
+	if (is) {
+		is >> soc;
+		while (!is.eof()) {
+
+			Socio* so = new Socio(soc.getNombre(), soc.getId(), soc.getCorreo(),soc.getNumeroTelefono(),soc.getVigente(),soc.getInstructor());
+			this->insertarSocio(so);
+			is >> soc;
+		}
+		is.close();
+	}
+	else {
+		cout << "No se pudo abrir para lectura...." << endl;
+
+
+	}
+
+}

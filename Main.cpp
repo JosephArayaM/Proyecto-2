@@ -5,8 +5,8 @@
 using namespace std;
 
 int main() {
-	Control* c1 = new Control();
-	c1->opciones();
+	//Control* c1 = new Control();
+	//c1->opciones();
 
 	//Expediente* expediente1 = new Expediente(60.5,35.3,25.8);
 	//Expediente* expediente2 = new Expediente(75.0, 30.2, 22.3);
@@ -14,11 +14,11 @@ int main() {
 	//Expediente* expediente4 = new Expediente(80.6, 37.4, 24.9);
 	//Expediente* expediente5 = new Expediente(64.4, 40.1, 26.5);
 
-	//Instructor* instructor1 = new Instructor("Pablo","7-02234","8446-5460","pablito67@gmail.com",7.8,expediente1);
-	//Instructor* instructor2 = new Instructor("Daniel", "3-2221", "7665-3221", "danielvg@gmail.com",8.1, expediente2);
-	//Instructor* instructor3 = new Instructor("Sofia", "1-6786", "8318-9654", "soperez@gmail.com",9.6, expediente3);
-	//Instructor* instructor4 = new Instructor("Erick", "1-43564", "8778-3487", "eg8919@gmail.com",8.5, expediente4);
-	//Instructor* instructor5 = new Instructor("Ester", "4-2389t", "7331-1773", "moreste45@gmail.com",7.2, expediente5);
+	//Instructor* instructor1 = new Instructor("Pablo","7-02234","8446-5460",7.8,expediente1);
+	//Instructor* instructor2 = new Instructor("Daniel", "3-2221", "7665-3221",8.1, expediente2);
+	//Instructor* instructor3 = new Instructor("Sofia", "1-6786", "8318-9654",9.6, expediente3);
+	//Instructor* instructor4 = new Instructor("Erick", "1-43564", "8778-3487",8.5, expediente4);
+	//Instructor* instructor5 = new Instructor("Ester", "4-23896", "7331-1773",7.2, expediente5);
 
 
 	//ListaInstructores* listaInstructores = new ListaInstructores();
@@ -35,7 +35,8 @@ int main() {
 	//listaInstructores->eliminarInstructor();
 	//cout << "Lista de instructores [" << listaInstructores->totalInstructores() << "] \n" << listaInstructores->toString() << endl;
 
-
+	//cout<<"--Grabando archivo de Clases--"<<endl;
+	//listaInstructores->salvarInstructores();
 
 	//// Se elimina toda la lista
 	//delete(listaInstructores);
@@ -92,7 +93,8 @@ int main() {
 	//listaSocios->eliminarSocio();
 	//cout << "Lista de Socios [" << listaSocios->totalSocios() << "] \n" << listaSocios->toString() << endl;
 
-
+	//cout<<"--Grabando archivo de Socios--"<<endl;
+	//listaSocios->salvarSocios();
 
 	//// Se elimina toda la lista
 	//delete(listaSocios);
@@ -133,11 +135,11 @@ int main() {
 
 
 	//---------------------------------------------------------------------------------------------------
-	//Salon* salon1 = new Salon("Colibri","A11",10);
-	//Salon* salon2 = new Salon("Jaguar", "A12", 15);
-	//Salon* salon3 = new Salon("Danta", "A13", 20);
-	//Salon* salon4 = new Salon("Gavilan", "A14", 20);
-	//Salon* salon5 = new Salon("Ballena", "A15", 25);
+	//Salon* salon1 = new Salon("Colibri","A11",10,20);
+	//Salon* salon2 = new Salon("Jaguar", "A12", 15,15);
+	//Salon* salon3 = new Salon("Danta", "A13", 20,20);
+	//Salon* salon4 = new Salon("Gavilan", "A14", 20,15);
+	//Salon* salon5 = new Salon("Ballena", "A15", 25,15);
 
 	//ListaSalones* listaSalones = new ListaSalones();
 
