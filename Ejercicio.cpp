@@ -1,6 +1,6 @@
 #include "Ejercicio.h"
 
-Ejercicio::Ejercicio(string nomEje, string repe, double pes){
+Ejercicio::Ejercicio(string nomEje, string repe, float pes){
 	nombreEjercicio = nomEje;
 	repeticiones = repe;
 	peso = pes;
@@ -23,7 +23,7 @@ string Ejercicio::getRepeticiones() {
 	return repeticiones;
 }
 
-double Ejercicio::getPeso() {
+float Ejercicio::getPeso() {
 	return peso;
 }
 
@@ -36,7 +36,7 @@ void Ejercicio::setRepeticiones(string repe) {
 	repeticiones = repe;
 }
 
-void Ejercicio::setPeso(double pes) {
+void Ejercicio::setPeso(float pes) {
 	peso = pes;
 }
 

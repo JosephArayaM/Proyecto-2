@@ -24,7 +24,7 @@ public:
 	NodoSocio* getActual() ;
 	void setActual(NodoSocio* actual);
 	string toString();
-
+        Socio* Encontrar();
 	void insertarSocio(Socio* socio);
 	bool eliminarSocio();
 	int totalSocios();

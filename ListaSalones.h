@@ -19,17 +19,18 @@ class ListaSalones {
 
 		void setPrimero(NodoSalon* primero);
 		void setActual(NodoSalon* actual);
-
+                void insertarClase(Clase* clas1, string nomb);
 		void insertarSalon(Salon* salon);
-
+                void mostrarSalon(string nomb);
 		bool eliminarSalon();
 
 		int totalSalones();
 
 		string toString();
-
-		virtual void  salvarSalones(); //Escribir en archivo
+                virtual void  salvarSalones(); //Escribir en archivo
 		virtual void recuperarSalones(); //Leer de Archivo
+
+
 
 
 

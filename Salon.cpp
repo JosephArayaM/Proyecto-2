@@ -2,10 +2,11 @@
 
 Salon::Salon(){}
 
-Salon::Salon(string nombreS, string cod, int capa) {
+Salon::Salon(string nombreS, string cod, int capa, int parti) {
 	nombreSalon = nombreS;
 	codigo = cod;
-	capacidad = capa;
+	cantidad = capa;
+        part = parti;
 }
 
 Salon::~Salon(){}
@@ -18,8 +19,16 @@ string Salon::getCodigo() {
 	return codigo;
 }
 
-int Salon::getCapacidad() {
-	return capacidad;
+int Salon::getCantidad() {
+	return cantidad;
+}
+
+void Salon::setPart(int part) {
+    this->part = part;
+}
+
+int Salon::getPart(){
+    return part;
 }
 
 void Salon::setNombreSalon(string nombreS) {
@@ -30,23 +39,33 @@ void Salon::setCodigo(string cod) {
 	codigo = cod;
 }
 
-void Salon::setCapacidad(int capa) {
-	capacidad = capa;
+void Salon::setCantidad(int capa) {
+	cantidad = capa;
 }
 
 string Salon::toString(){
 	stringstream s;
 	s << "Nombre del Salon: " << nombreSalon << endl;
 	s << " Codigo del Salon: " << codigo << endl;
-	s << "Capacidad del Salon: " << capacidad << endl;
+	s << "Capacidad del Salon: " << cantidad << endl;
+        s << "Cantidad de participantes: " << part <<endl;
+        s << listaC->toString();
 	return s.str();
 }
 
-//Grabar sobre archivo en el disco duro
+void Salon::insertClase(Clase* clas1){
+    if(part <= cantidad){
+        listaC->insertarClase(clas1);
+        part++;
+    }
+    else
+        cout << "Ya no hay mas campos" << endl;
+}
+
 ostream& operator<<(ostream& out, const Salon& sal) {
-	return out << sal.nombreSalon << endl << sal.codigo << endl << sal.capacidad << endl;
+	return out << sal.nombreSalon << endl << sal.codigo << endl << sal.cantidad << endl;
 }
 
 istream& operator>>(istream& in, Salon& sal) {
-	return in >> sal.nombreSalon >> sal.codigo >> sal.capacidad;
+	return in >> sal.nombreSalon >> sal.codigo >> sal.cantidad;
 }

@@ -3,29 +3,41 @@
 
 #include <iostream>
 #include <sstream>
-#include <fstream>
+#include "Instructor.h"
+#include "ListaSocios.h"
 
 using namespace std;
 
 class Clase {
 
 	private:
-		int horaInicio;
-		int horaFinal;
+            string nombreC;
+            int horaInicio;
+            int horaFinal;
+            Instructor* inst;
+            ListaSocios* soc;
+            int part;
+            int max;
 
 	public:
 		Clase();
-		Clase(int, int);
+		Clase(string, int, int, int, int);
 		~Clase();
 		int getHoraInicio();
 		int getHoraFinal();
+                void setMax(int max);
+                int getMax();
+                void setPart(int part);
+                int getPart();
+                void setInst(Instructor* inst);
+                void setNombreC(string nombreC);
+                string getNombreC();
 		void setHoraInicio(int);
 		void setHoraFinal(int);
 		string toString();
-
-		friend ostream& operator<<(ostream&, const Clase&);
+                void InsertarSoc(Socio* soc1);
+                friend ostream& operator<<(ostream&, const Clase&);
 		friend istream& operator>>(istream&, Clase&);
-
 };
 
 #endif

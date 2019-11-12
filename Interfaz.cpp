@@ -80,9 +80,8 @@ void Interfaz::imprimeCla() {
 	cout << "----------------Menu de Clases----------------------" << endl;
 	cout << "----------------------------------------------------" << endl;
 	cout << "1) - Crear una clase" << endl;
-	cout << "3) - Incribir socios a clases" << endl;
-	cout << "4) - Ver socios inscritos a una clase" << endl;
-	cout << "5) - Salir " << endl;
+	cout << "2) - Incribir socios a clases" << endl;
+	cout << "3) - Salir " << endl; 
 	cout << "----------------------------------------------------" << endl;
 	cout << "----------------Que desea hacer ?-------------------" << endl;
 	cout << "----------------------------------------------------" << endl;
@@ -95,9 +94,8 @@ void Interfaz::imprimeRut() {
 	cout << "----------------------------------------------------" << endl;
 	cout << "-----------------Menu de Rutinas--------------------" << endl;
 	cout << "----------------------------------------------------" << endl;
-	cout << "1) - Ver rutinas" << endl;
-	cout << "2) - Renovar rutina " << endl;
-	cout << "3) - Salir " << endl;
+	cout << "1) - Renovar rutina " << endl;
+	cout << "2) - Salir " << endl;
 	cout << "----------------------------------------------------" << endl;
 	cout << "----------------Que desea hacer ?-------------------" << endl;
 	cout << "----------------------------------------------------" << endl;
@@ -110,9 +108,10 @@ void Interfaz::imprimeSal() {
 	cout << "----------------------------------------------------" << endl;
 	cout << "-----------------Menu de Salones--------------------" << endl;
 	cout << "----------------------------------------------------" << endl;
-	cout << "1) - Ver salones" << endl;
-	cout << "2) - Ver las clases de un salon" << endl;
-	cout << "3) - Salir " << endl;
+        cout << "1) - Definir salones" << endl;
+	cout << "2) - Ver salones" << endl;
+	cout << "3) - Ver las clases de un salon" << endl;
+	cout << "4) - Salir " << endl;
 	cout << "----------------------------------------------------" << endl;
 	cout << "----------------Que desea hacer ?-------------------" << endl;
 	cout << "----------------------------------------------------" << endl;

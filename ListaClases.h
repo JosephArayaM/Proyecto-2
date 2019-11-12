@@ -30,9 +30,9 @@ class ListaClases {
 		void insertarClase(Clase* clase);
 		bool eliminarClase();
 		int totalClases();
-
-		virtual void  salvarClases(); //Escribir en archivo
+                virtual void  salvarClases(); //Escribir en archivo
 		virtual void recuperarClases(); //Leer de Archivo
+
 
 };
 #endif

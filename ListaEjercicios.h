@@ -26,7 +26,7 @@ public:
 	void insertarEjercicio(Ejercicio* ejercicio);
 	bool eliminarEjercicio();
 	int totalEjercicios();
-
+        
 	virtual void  salvarEjercicios(); //Escribir en archivo
 	virtual void recuperarEjercicios(); //Leer de Archivo
 

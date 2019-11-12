@@ -12,7 +12,7 @@ private:
 
 public:
 	Instructor();
-	Instructor(string, string, string, string, int);
+	Instructor(string, string, string, int);
 	int getPuntaje();
 	string getNumeroTelefono();
 	void setNumeroTelefono(string);
