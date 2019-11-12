@@ -153,7 +153,8 @@ int main() {
 	//listaSalones->eliminarSalon();
 	//cout << "Lista de Salones [" << listaSalones->totalSalones() << "] \n" << listaSalones->toString() << endl;
 
-
+	//cout<<"--Grabando archivo de Salones--"<<endl;
+	//listaSalones->salvarSalones();
 
 	//// Se elimina toda la lista
 	//delete(listaSalones);
@@ -180,7 +181,8 @@ int main() {
 	//listaEjercicios->eliminarEjercicio();
 	//cout << "Lista de Ejercicios [" << listaEjercicios->totalEjercicios() << "] \n" << listaEjercicios->toString() << endl;
 
-
+	//cout<<"--Grabando archivo de Ejercicios--"<<endl;
+	//listaEjercicios->salvarEjercicios();
 
 	//// Se elimina toda la lista
 	//delete(listaEjercicios);

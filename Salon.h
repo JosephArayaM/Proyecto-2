@@ -3,6 +3,7 @@
 
 #include <sstream>
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -29,7 +30,8 @@ class Salon {
 		
 		string toString();
 
-
+		friend ostream& operator<<(ostream&, const Salon&);
+		friend istream& operator>>(istream&, Salon&);
 
 };
 #endif

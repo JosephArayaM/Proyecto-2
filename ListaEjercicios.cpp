@@ -70,3 +70,51 @@ int ListaEjercicios::totalEjercicios() {
 	return totalEjercicios;
 
 }
+
+void ListaEjercicios::salvarEjercicios() {
+	//1-crear un archivo de salida para grabar
+	ofstream os("ListadeEjercicios.txt", ios::out);
+
+	//2- Ver si se pudo abrir
+	if (os) {//si se pudo abrir
+		actual = primero;
+		while (actual != nullptr) {
+			os << actual->getEjercicio()->getNombreEjercicio();
+			os << actual->getEjercicio()->getRepeticiones();
+			os << actual->getEjercicio()->getPeso();
+		}
+		os.close(); //Cerrar el archivo una vez grabado
+
+
+	}
+	else {
+
+		cout << "No se pudo abrir" << endl;
+	}
+
+}
+
+void ListaEjercicios::recuperarEjercicios() {
+
+
+	this->eliminarEjercicio();  // este metodo auto-limpia el contened.
+
+	Ejercicio ejer;
+	ifstream is("ListadeEjercicios.txt", ios::in);
+	if (is) {
+		is >> ejer;
+		while (!is.eof()) {
+
+			Ejercicio* eje = new Ejercicio(ejer.getNombreEjercicio(), ejer.getRepeticiones(),ejer.getPeso());
+			this->insertarEjercicio(eje);
+			is >> ejer;
+		}
+		is.close();
+	}
+	else {
+		cout << "No se pudo abrir para lectura...." << endl;
+
+
+	}
+
+}

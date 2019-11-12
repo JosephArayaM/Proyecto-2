@@ -2,6 +2,7 @@
 #define Ejercicio_h
 #include <iostream>
 #include <sstream>
+#include<fstream>
 using namespace std;
 
 class Ejercicio {
@@ -9,27 +10,28 @@ class Ejercicio {
 	private:
 		string nombreEjercicio;
 		string repeticiones;
-		float peso;
+		double peso;
 
 
 	public:
 
-		Ejercicio(string, string, float);
+		Ejercicio(string, string, double);
 		Ejercicio();
 		virtual~Ejercicio();
 
 		string getNombreEjercicio();
 		string getRepeticiones();
-		float getPeso();
+		double getPeso();
 
 		void setNombreEjercicio(string);
 		void setRepeticiones(string);
-		void setPeso(float);
+		void setPeso(double);
 
 		string toString();
 
 
-
+		friend ostream& operator<<(ostream&, const Ejercicio&);
+		friend istream& operator>>(istream&, Ejercicio&);
 
 
 

@@ -73,3 +73,51 @@ string ListaSalones::toString() {
 	return s.str();
 
 }
+
+void ListaSalones::salvarSalones() {
+	//1-crear un archivo de salida para grabar
+	ofstream os("ListadeSalones.txt", ios::out);
+
+	//2- Ver si se pudo abrir
+	if (os) {//si se pudo abrir
+		actual = primero;
+		while (actual != nullptr) {
+			os << actual->getSalon()->getNombreSalon();
+			os << actual->getSalon()->getCodigo();
+			os << actual->getSalon()->getCapacidad();
+		}
+		os.close(); //Cerrar el archivo una vez grabado
+
+
+	}
+	else {
+
+		cout << "No se pudo abrir" << endl;
+	}
+
+}
+
+void ListaSalones::recuperarSalones() {
+
+
+	this->eliminarSalon();  // este metodo auto-limpia el contened.
+
+	Salon sal;
+	ifstream is("ListadeSalones.txt", ios::in);
+	if (is) {
+		is >> sal;
+		while (!is.eof()) {
+
+			Salon* salo = new Salon(sal.getNombreSalon(), sal.getCodigo(),sal.getCapacidad);
+			this->insertarSalon(salo);
+			is >> sal;
+		}
+		is.close();
+	}
+	else {
+		cout << "No se pudo abrir para lectura...." << endl;
+
+
+	}
+
+}

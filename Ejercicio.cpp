@@ -1,6 +1,6 @@
 #include "Ejercicio.h"
 
-Ejercicio::Ejercicio(string nomEje, string repe, float pes){
+Ejercicio::Ejercicio(string nomEje, string repe, double pes){
 	nombreEjercicio = nomEje;
 	repeticiones = repe;
 	peso = pes;
@@ -23,7 +23,7 @@ string Ejercicio::getRepeticiones() {
 	return repeticiones;
 }
 
-float Ejercicio::getPeso() {
+double Ejercicio::getPeso() {
 	return peso;
 }
 
@@ -36,7 +36,7 @@ void Ejercicio::setRepeticiones(string repe) {
 	repeticiones = repe;
 }
 
-void Ejercicio::setPeso(float pes) {
+void Ejercicio::setPeso(double pes) {
 	peso = pes;
 }
 
@@ -47,4 +47,12 @@ string Ejercicio::toString(){
 	s << "Peso: " << peso << endl;
 	return s.str();
 
+}
+
+ostream& operator<<(ostream& out, const Ejercicio& ejer) {
+	return out << ejer.nombreEjercicio << endl << ejer.repeticiones << endl << ejer.peso << endl;
+}
+
+istream& operator>>(istream& in, Ejercicio& ejer) {
+	return in >> ejer.nombreEjercicio >> ejer.repeticiones >> ejer.peso;
 }

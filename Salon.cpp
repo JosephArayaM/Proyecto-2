@@ -41,3 +41,12 @@ string Salon::toString(){
 	s << "Capacidad del Salon: " << capacidad << endl;
 	return s.str();
 }
+
+//Grabar sobre archivo en el disco duro
+ostream& operator<<(ostream& out, const Salon& sal) {
+	return out << sal.nombreSalon << endl << sal.codigo << endl << sal.capacidad << endl;
+}
+
+istream& operator>>(istream& in, Salon& sal) {
+	return in >> sal.nombreSalon >> sal.codigo >> sal.capacidad;
+}
