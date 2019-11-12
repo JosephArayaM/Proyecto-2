@@ -123,8 +123,9 @@ int main() {
 	//// Se elimina el instructor
 	//listaClases->eliminarClase();
 	//cout << "Lista de Clases [" << listaClases->totalClases() << "] \n" << listaClases->toString() << endl;
-
-
+	
+	//cout<<"--Grabando archivo de Clases--"<<endl;
+	//listaClases->salvarClases();
 
 	//// Se elimina toda la lista
 	//delete(listaClases);

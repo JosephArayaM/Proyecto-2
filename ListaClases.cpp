@@ -71,3 +71,50 @@ int ListaClases::totalClases(){
 	}
 	return totalClases;
 }
+
+void ListaClases::salvarClases() {
+	//1-crear un archivo de salida para grabar
+	ofstream os("ListadeClases.txt", ios::out);
+
+	//2- Ver si se pudo abrir
+	if (os) {//si se pudo abrir
+		actual = primero;
+			while(actual != nullptr) {
+				os << actual->getClase()->getHoraInicio();
+				os << actual->getClase()->getHoraFinal();
+		}
+		os.close(); //Cerrar el archivo una vez grabado
+
+
+	}
+	else {
+
+		cout << "No se pudo abrir" << endl;
+	}
+
+}
+
+void ListaClases::recuperarClases() {
+
+
+	this->eliminarClase();  // este metodo auto-limpia el contened.
+
+	Clase cl;
+	ifstream is("ListaClases.txt", ios::in);
+	if (is) {
+		is >> cl;
+		while (!is.eof()) {
+
+			Clase* cla = new Clase(cl.getHoraInicio(), cl.getHoraFinal());
+			this->insertarClase(cla);
+			is >> cl;
+		}
+		is.close();
+	}
+	else {
+		cout << "No se pudo abrir para lectura...." << endl;
+
+
+	}
+
+}

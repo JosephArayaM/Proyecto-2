@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <fstream>
 
 using namespace std;
 
@@ -21,6 +22,9 @@ class Clase {
 		void setHoraInicio(int);
 		void setHoraFinal(int);
 		string toString();
+
+		friend ostream& operator<<(ostream&, const Clase&);
+		friend istream& operator>>(istream&, Clase&);
 
 };
 

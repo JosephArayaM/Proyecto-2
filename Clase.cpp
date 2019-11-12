@@ -32,3 +32,11 @@ string Clase:: toString(){
 	s << "Hora Final de Clase: " << horaFinal << endl;
 	return s.str();
 }
+
+ostream& operator<<(ostream& out, const Clase& cl) {
+	return out << cl.horaInicio << endl << cl.horaFinal << endl;
+}
+
+istream& operator>>(istream& in, Clase& cl) {
+	return in >> cl.horaInicio >> cl.horaFinal;
+}
