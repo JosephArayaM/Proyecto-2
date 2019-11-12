@@ -77,10 +77,10 @@ void Control::opcInscrip() {
             cout << "(1 para bajar grasa y  2 para subir masa muscular)"<<endl;
             cin >> obj;
             system("cls");
-            /*cout<<"Los instructores son: "<<endl;
+            cout<<"Los instructores son: "<<endl;
             cout<<ListaIns->toString();
             cout<<"Digite el nombre del instructor a asignar al socio"<<endl;
-            cin >> nom2;*/
+            cin >> nom2;
             Expediente* Exp1 = new Expediente();
             Exp1->SetGrasaCor(gras);
             Exp1->SetMasaMusc(mas);
