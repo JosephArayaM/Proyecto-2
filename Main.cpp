@@ -5,8 +5,8 @@
 using namespace std;
 
 int main() {
-	Control* c1 = new Control();
-	c1->opciones();
+	//Control* c1 = new Control();
+	//c1->opciones();
 
 	//Expediente* expediente1 = new Expediente(60.5,35.3,25.8);
 	//Expediente* expediente2 = new Expediente(75.0, 30.2, 22.3);
@@ -158,6 +158,32 @@ int main() {
 	//delete(listaSalones);
 	//cout << "Lista de Salones [" << listaSalones->totalSalones() << "] \n" << listaSalones->toString() << endl;
 
+	//----------------------------------------------------------------------------------------
+	//Ejercicio* ejercicio1 = new Ejercicio("Press de Banca","10 repeticiones",10.5);
+	//Ejercicio* ejercicio2 = new Ejercicio("Peso Muerto","10 repeticiones",8.5);
+	//Ejercicio* ejercicio3 = new Ejercicio("Press Militar","10 repeticiones",10.5);
+	//Ejercicio* ejercicio4 = new Ejercicio("Remo","20 repeticiones",5.5);
+	//Ejercicio* ejercicio5 = new Ejercicio("Cinta de Correr","30 minutos",0.0);
+
+	//ListaEjercicios* listaEjercicios = new ListaEjercicios();
+
+	//listaEjercicios->insertarEjercicio(ejercicio1);
+	//listaEjercicios->insertarEjercicio(ejercicio2);
+	//listaEjercicios->insertarEjercicio(ejercicio3);
+	//listaEjercicios->insertarEjercicio(ejercicio4);
+	//listaEjercicios->insertarEjercicio(ejercicio5);
+
+	//cout << "Lista de Ejercicios [" << listaEjercicios->totalEjercicios() << "] \n" << listaEjercicios->toString() << endl;
+
+	//// Se elimina el salon
+	//listaEjercicios->eliminarEjercicio();
+	//cout << "Lista de Ejercicios [" << listaEjercicios->totalEjercicios() << "] \n" << listaEjercicios->toString() << endl;
+
+
+
+	//// Se elimina toda la lista
+	//delete(listaEjercicios);
+	//cout << "Lista de Ejercicios [" << listaEjercicios->totalEjercicios() << "] \n" << listaEjercicios->toString() << endl;
 
 	return 0;
 }
