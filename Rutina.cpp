@@ -47,6 +47,7 @@ void Rutina::GenerarCod() {
 		num = 1 + rand() % (101 - 1);
 		cout << num << " ";
 	}
+        randCod = num;
 }
 
 

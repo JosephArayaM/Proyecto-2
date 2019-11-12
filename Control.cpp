@@ -81,9 +81,12 @@ void Control::opcInscrip() {
             cout<<ListaIns->toString();
             cout<<"Digite el nombre del instructor a asignar al socio"<<endl;
             cin >> nom2;*/
-            Expediente* Exp1 = new Expediente(pes1, mas, gras);
+            Expediente* Exp1 = new Expediente();
+            Exp1->SetGrasaCor(gras);
+            Exp1->SetMasaMusc(mas);
+            Exp1->SetPeso(pes1);
             Rutina* rut1 = new Rutina();
-            rut1->SetRandCod(randC);
+            rut1->GenerarCod();
             rut1->setDatos(Exp1);
             rut1->setObjetivo(obj);
             rut1->GenerarCod();
@@ -178,14 +181,38 @@ void Control::opcRut() {
         if(opc == 1){
             system("cls");
             string nom1;
+            float pes1, mas, gras;
             cout << ListaSoc->toString();
             cout << endl;
-            cout << "Digite del socio: "<<endl;;
+            cout << "Digite el nombre del socio: "<<endl;;
             cin >> nom1;
-            
             ListaSoc->setActual(ListaSoc->getPrimero());
             while (ListaSoc->getActual() != nullptr) {
-                if(ListaSoc->getActual())
+                if(ListaSoc->getActual()->getSocio()->getNombre() == nom1){
+                    cout << "Peso: "<<endl;
+                    cin >> pes1;
+                    cout << "Masa muscular: "<<endl;
+                    cin >> mas;
+                    cout << "Grasa: "<<endl;
+                    cin >> gras;
+                    Rutina* rut1 = new Rutina();
+                    Expediente* Exp1 = new Expediente();
+                    Exp1->SetGrasaCor(gras);
+                    Exp1->SetMasaMusc(mas);
+                    Exp1->SetPeso(pes1)
+                    rut1->GenerarCod();
+                    rut1->setDatos(Exp1);
+                    rut1->GenerarCod();
+                    rut1->LlenarList();
+                    if(ListaSoc->getActual()->getSocio()->getVigente()->getObjetivo() == 1){
+                        ListaSoc->getActual()->getSocio()->determinarProg(gras);
+                    }else{
+                        ListaSoc->getActual()->getSocio()->determinarProg(mas);
+                    }
+                    ListaSoc->getActual()->getSocio()->determinarProg()
+                    ListaSoc->getActual()->getSocio()->ActualizarDatos(rut1);
+                }
+                ListaSoc->setActual(ListaSoc->getActual()->getSiguiente());
             }
         } else {
             cicloPrincipal = false;

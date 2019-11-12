@@ -81,3 +81,7 @@ string Socio::toString() {
 	return s.str();
 
 }
+
+void Socio::ActualizarDatos(Rutina* nuevo){
+    Vigente = nuevo;
+}

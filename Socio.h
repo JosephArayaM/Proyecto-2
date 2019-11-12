@@ -29,7 +29,7 @@ public:
 	Instructor* getInstructor();
 	void setVigente(Rutina*);
 	void setInstructor(Instructor*);
-
+        void ActualizarDatos(Rutina* nuevo);
 	bool determinarProg(float);
 	string toString();
 
