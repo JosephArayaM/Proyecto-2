@@ -75,7 +75,6 @@ int ListaSocios::totalSocios() {
 	return totalSocios;
 }
 
-
 void ListaSocios::salvarSocios() {
 	//1-crear un archivo de salida para grabar
 	ofstream os("ListadeSocios.txt", ios::out);

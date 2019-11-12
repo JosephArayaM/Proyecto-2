@@ -2,8 +2,6 @@
 #define Instructor_h
 
 #include "Persona.h"
-#include "Socio.h"
-#include <fstream>
 
 using namespace std;
 
@@ -23,9 +21,9 @@ public:
 
 
 	string toString();
-
-	friend ostream& operator<<(ostream&, const Instructor&);
+        friend ostream& operator<<(ostream&, const Instructor&);
 	friend istream& operator>>(istream&, Instructor&);
+
 
 };
 

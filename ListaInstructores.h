@@ -26,8 +26,7 @@ public:
 	int totalInstructores();
 	Instructor* Encontrar(string nomb);
 	Instructor* MejorResul();
-
-	virtual void  salvarInstructores(); //Escribir en archivo
+        virtual void  salvarInstructores(); //Escribir en archivo
 	virtual void recuperarInstructores(); //Leer de Archivo
 };
 #endif

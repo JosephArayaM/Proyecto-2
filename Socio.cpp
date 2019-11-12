@@ -5,7 +5,7 @@
 using namespace std;
 
 
-Socio::Socio(string nom, string  ide, string numTel, string cor, Rutina* rut, Instructor* ins) {
+Socio::Socio(string nom, string  ide, string numTel, string cor, Rutina* rut, Instructor* ins){
 	Persona(nom, ide);
 	numeroTelefono = numTel;
 	correo = cor;
@@ -13,7 +13,7 @@ Socio::Socio(string nom, string  ide, string numTel, string cor, Rutina* rut, In
 	instructor = ins;
 }
 
-Socio::Socio() {}
+Socio::Socio(){}
 
 Socio::~Socio() {}
 
@@ -82,11 +82,10 @@ string Socio::toString() {
 
 }
 
-void Socio::ActualizarDatos(Rutina* nuevo) {
-	Vigente = nuevo;
+void Socio::ActualizarDatos(Rutina* nuevo){
+    Vigente = nuevo;
 }
 
-//Grabar sobre archivo en el disco duro
 ostream& operator<<(ostream& out, const Socio& soc) {
 	return out << soc.nombre << endl << soc.id << endl << soc.correo << endl << soc.numeroTelefono << endl<<soc.Vigente<<endl<<soc.instructor<<endl;
 }

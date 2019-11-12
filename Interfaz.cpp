@@ -64,9 +64,8 @@ void Interfaz::imprimeSoc() {
 	cout << "-----------------Menu de Socios---------------------" << endl;
 	cout << "----------------------------------------------------" << endl;
 	cout << "1) - Mostrar la lista de Socios" << endl;
-	cout << "2) - Mostrar un socio" << endl;
-	cout << "3) - Mostrar la rutina de un socio" << endl;
-	cout << "4) - Salir " << endl;
+	cout << "2) - Mostrar la rutina de un socio" << endl;
+	cout << "3) - Salir " << endl;
 	cout << "----------------------------------------------------" << endl;
 	cout << "----------------Que desea hacer ?-------------------" << endl;
 	cout << "----------------------------------------------------" << endl;

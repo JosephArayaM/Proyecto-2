@@ -6,10 +6,10 @@ ListaSalones::ListaSalones() {
 	actual = nullptr;
 }
 
-ListaSalones::ListaSalones(ListaSalones* orig) {
+ListaSalones::ListaSalones(ListaSalones* orig){
 }
 
-ListaSalones:: ~ListaSalones() {
+ListaSalones:: ~ListaSalones(){
 	while (primero != nullptr) {
 		actual = primero;
 		primero = primero->getSiguiente();
@@ -38,15 +38,15 @@ void ListaSalones::insertarSalon(Salon* salon) {
 	primero = new NodoSalon(salon, primero);
 }
 
-bool ListaSalones::eliminarSalon() {
+bool ListaSalones::eliminarSalon(){
 	if (primero == nullptr) {
 		return false;
 	}
 	else
 		actual = primero;
-	primero = primero->getSiguiente();
-	delete actual;
-	return true;
+		primero = primero->getSiguiente();
+		delete actual;
+		return true;
 }
 
 int ListaSalones::totalSalones() {
@@ -74,24 +74,24 @@ string ListaSalones::toString() {
 
 }
 
-void ListaSalones::mostrarSalon(string nomb) {
-	actual = primero;
-	while (actual != NULL) {
-		if (actual->getSalon()->getNombreSalon() == nomb) {
-			cout << actual->getSalon()->toString();
-		}
-		actual = actual->getSiguiente();
-	}
+void ListaSalones::mostrarSalon(string nomb){
+    actual = primero;
+    while(actual != NULL){
+        if(actual->getSalon()->getNombreSalon() == nomb){
+            cout << actual->getSalon()->toString();
+        }
+        actual = actual->getSiguiente();
+    }
 }
 
-void ListaSalones::insertarClase(Clase* clas1, string nomb) {
-	actual = primero;
-	while (actual != NULL) {
-		if (actual->getSalon()->getNombreSalon() == nomb) {
-			actual->getSalon()->insertClase(clas1);
-		}
-		//        actual = actual->getSiguiente();
-	}
+void ListaSalones::insertarClase(Clase* clas1, string nomb){
+    actual = primero;
+    while(actual != NULL){
+        if(actual->getSalon()->getNombreSalon() == nomb){
+            actual->getSalon()->insertClase(clas1); 
+        }
+//        actual = actual->getSiguiente();
+    }
 }
 
 void ListaSalones::salvarSalones() {
@@ -105,7 +105,6 @@ void ListaSalones::salvarSalones() {
 			os << actual->getSalon()->getNombreSalon();
 			os << actual->getSalon()->getCodigo();
 			os << actual->getSalon()->getCantidad();
-			os << actual -> getSalon()->getPart();
 		}
 		os.close(); //Cerrar el archivo una vez grabado
 
@@ -129,7 +128,7 @@ void ListaSalones::recuperarSalones() {
 		is >> sal;
 		while (!is.eof()) {
 
-			Salon* salo = new Salon(sal.getNombreSalon(), sal.getCodigo(), sal.getCantidad(),sal.getPart());
+			Salon* salo = new Salon(sal.getNombreSalon(), sal.getCodigo(),sal.getCantidad);
 			this->insertarSalon(salo);
 			is >> sal;
 		}

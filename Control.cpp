@@ -152,19 +152,22 @@ void Control::opcSoc() {
         int opc = i->menu();
         if(opc == 1){
             system("cls");
-            cout << "Funciona" << endl;
+            cout << ListaSoc->toString();
             system("pause");
         } else if(opc == 2){
             system("cls");
-            Instructor* inst;
-            inst = ListaIns->MejorResul();
-            cout << inst->toString();
-            system("pause");
-        } else if(opc == 3){
-            system("cls");
-            Instructor* inst;
-            inst = ListaIns->MejorResul();
-            cout << inst->toString();
+            string nom;
+            cout << ListaSoc->toString();
+            cout << endl;
+            cout << "Digite el nombre del socio: "<<endl;;
+            cin >> nom;
+            ListaSoc->setActual(ListaSoc->getPrimero());
+            while (ListaSoc->getActual() != nullptr) {
+                if(ListaSoc->getActual()->getSocio()->getNombre() == nom){
+                    cout << ListaSoc->getActual()->getSocio()->getVigente()->toString();
+                }
+                ListaSoc->setActual(ListaSoc->getActual()->getSiguiente());
+            }    
             system("pause");
         } else {
             cicloPrincipal = false;
