@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <fstream>
 #include "Instructor.h"
 #include "ListaSocios.h"
 

@@ -2,6 +2,7 @@
 #define Instructor_h
 
 #include "Persona.h"
+#include <fstream>
 
 using namespace std;
 

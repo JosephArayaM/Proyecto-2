@@ -3,6 +3,7 @@
 
 #include<iostream>
 #include<sstream>
+#include <fstream>
 #include"Persona.h"
 #include "Rutina.h"
 #include "Instructor.h"

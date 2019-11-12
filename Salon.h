@@ -3,6 +3,7 @@
 
 #include <sstream>
 #include <iostream>
+#include <fstream>
 #include "ListaClases.h"
 
 using namespace std;

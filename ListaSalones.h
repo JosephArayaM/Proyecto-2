@@ -28,7 +28,7 @@ class ListaSalones {
 
 		string toString();
                 virtual void  salvarSalones(); //Escribir en archivo
-		virtual void recuperarSalones(); //Leer de Archivo
+		/*virtual void recuperarSalones(); //Leer de Archivo*/
 
 
 

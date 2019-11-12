@@ -66,7 +66,7 @@ string Clase:: toString(){
 
 void Clase::InsertarSoc(Socio* soc1){
     if(part <= max){
-        soc->insertarSocio(soc1)
+        soc->insertarSocio(soc1);
         part++;
     }
     else

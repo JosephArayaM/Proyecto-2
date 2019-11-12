@@ -202,7 +202,7 @@ void Control::opcRut() {
                     Expediente* Exp1 = new Expediente();
                     Exp1->SetGrasaCor(gras);
                     Exp1->SetMasaMusc(mas);
-                    Exp1->SetPeso(pes1)
+                    Exp1->SetPeso(pes1);
                     rut1->GenerarCod();
                     rut1->setDatos(Exp1);
                     rut1->GenerarCod();
@@ -212,7 +212,7 @@ void Control::opcRut() {
                     }else{
                         ListaSoc->getActual()->getSocio()->determinarProg(mas);
                     }
-                    ListaSoc->getActual()->getSocio()->determinarProg()
+                    
                     ListaSoc->getActual()->getSocio()->ActualizarDatos(rut1);
                 }
                 ListaSoc->setActual(ListaSoc->getActual()->getSiguiente());

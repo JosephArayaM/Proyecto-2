@@ -1,6 +1,7 @@
 #ifndef Ejercicio_h
 #define Ejercicio_h
 #include <iostream>
+#include <fstream>
 #include <sstream>
 using namespace std;
 

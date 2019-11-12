@@ -80,8 +80,12 @@ void ListaClases::salvarClases() {
 	if (os) {//si se pudo abrir
 		actual = primero;
 			while(actual != nullptr) {
+                                os << actual->getClase()->getNombreC(); 
 				os << actual->getClase()->getHoraInicio();
 				os << actual->getClase()->getHoraFinal();
+                                os << actual->getClase()->getPart();
+                                os << actual->getClase()->getMax();
+                                
 		}
 		os.close(); //Cerrar el archivo una vez grabado
 
@@ -105,7 +109,7 @@ void ListaClases::recuperarClases() {
 		is >> cl;
 		while (!is.eof()) {
 
-			Clase* cla = new Clase(cl.getHoraInicio(), cl.getHoraFinal());
+			Clase* cla = new Clase(cl.getNombreC(),cl.getHoraInicio(), cl.getHoraFinal(), cl.getPart(), cl.getMax());
 			this->insertarClase(cla);
 			is >> cl;
 		}

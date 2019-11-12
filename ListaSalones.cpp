@@ -105,6 +105,8 @@ void ListaSalones::salvarSalones() {
 			os << actual->getSalon()->getNombreSalon();
 			os << actual->getSalon()->getCodigo();
 			os << actual->getSalon()->getCantidad();
+                        os << actual->getSalon()->getPart();
+                                
 		}
 		os.close(); //Cerrar el archivo una vez grabado
 
@@ -117,7 +119,7 @@ void ListaSalones::salvarSalones() {
 
 }
 
-void ListaSalones::recuperarSalones() {
+/*void ListaSalones::recuperarSalones() {
 
 
 	this->eliminarSalon();  // este metodo auto-limpia el contened.
@@ -128,7 +130,7 @@ void ListaSalones::recuperarSalones() {
 		is >> sal;
 		while (!is.eof()) {
 
-			Salon* salo = new Salon(sal.getNombreSalon(), sal.getCodigo(),sal.getCantidad);
+			Salon* salo = new Salon(sal.getNombreSalon(), sal.getCodigo(),sal.getCantidad, sal.getPart());
 			this->insertarSalon(salo);
 			is >> sal;
 		}
@@ -140,4 +142,4 @@ void ListaSalones::recuperarSalones() {
 
 	}
 
-}
+}*/
