@@ -15,6 +15,7 @@
 #include "ListaSalones.h"
 #include "Fecha.h"
 #include "ListaClases.h"
+#include "ListaEjercicios.h"
 
 class Control {
 public:
@@ -24,6 +25,7 @@ public:
     ListaRutinas* ListaRut = new ListaRutinas();
     ListaSalones* ListaSal = new ListaSalones();
     ListaClases* ListaCla = new ListaClases();
+    ListaEjercicios* ListaEje = new ListaEjercicios();
     
     Control();
     void opciones();

@@ -1,4 +1,5 @@
 #include "Rutina.h"
+#include "NodoEjercicio.h"
 
 
 Rutina::Rutina() {
@@ -58,11 +59,12 @@ string Rutina::toString() {
 	return s.str();
 }
 
-void Rutina::LlenarVec(){
+void Rutina::LlenarList(){
     string nom, rep;
     float pes;
-    system("cls");
-    for(int i= 0; i < 12; i++){
+    list->setActual(list->getPrimero());
+    while(list->getActual() != NULL){
+        system("cls");
         cout<<"Digite los datos del ejercicio: "<<endl;
         cout<<endl;
         cout<<"Nombre del ejercicio: "<<endl;
@@ -72,8 +74,9 @@ void Rutina::LlenarVec(){
         cout<<"Peso que debe utilizar: "<<endl;
         cin>>pes;
         cout<<endl;
-        vec[i]->setNombreEjercicio(nom);
-        vec[i]->setRepeticiones(rep);
-        vec[i]->setPeso(pes);
+        list->getActual()->getEjercicio()->setNombreEjercicio(nom);
+        list->getActual()->getEjercicio()->setRepeticiones(rep);
+        list->getActual()->getEjercicio()->setPeso(pes);
+        list->setActual(list->getActual()->getSiguiente());
     }
 }

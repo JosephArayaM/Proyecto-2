@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "Expediente.h"
-#include "Ejercicio.h"
+#include "ListaEjercicios.h"
 #include "Expediente.h"
 
 using namespace std;
@@ -17,8 +17,7 @@ private:
 	int objetivo; // 1 para bajar grasa corporal y 2 para subir masa muscular
 	string randCod;
 	Expediente* datos;
-	Ejercicio* vec[12];
-
+        ListaEjercicios* list;
 
 public:
 	Rutina();
@@ -33,7 +32,7 @@ public:
 	void setDatos(Expediente* datos);
 
 	void GenerarCod();
-        void LlenarVec();
+        void LlenarList();
 	string toString();
 };
 

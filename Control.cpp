@@ -80,14 +80,13 @@ void Control::opcInscrip() {
             cout<<ListaIns->toString();
             cout<<"Digite el nombre del instructor a asignar al socio"<<endl;
             cin >> nom2;
-            
             Expediente* Exp1 = new Expediente(pes1, mas, gras);
             Rutina* rut1 = new Rutina();
             rut1->SetRandCod(randC);
             rut1->setDatos(Exp1);
             rut1->setObjetivo(obj);
             rut1->GenerarCod();
-            rut1->LlenarVec();
+            rut1->LlenarList();
             Instructor* ins1 = new Instructor();
             ins1 = ListaIns->Encontrar(nom2);
             Persona* soc1 = new Socio(nom1, ide, num, cor, rut1, ins1);
